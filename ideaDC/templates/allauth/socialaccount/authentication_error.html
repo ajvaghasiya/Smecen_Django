@@ -1,0 +1,9 @@
+{% extends 'auth_base.html' %} {% load static %} {% load i18n %} {% load crispy_forms_tags %} {% block title %}IdeaDC | Social Network Login Failure{% endblock %} {% block content %}
+<div class="container">
+<div class="errorcontainer" style="margin-top: 20%; margin-left: 20%;"> 
+<h1>{% trans "Social Network Login Failure" %}</h1>
+
+<p>{% trans "An error occurred while attempting to login via your social network account." %}</p>
+</div>
+</div>
+{% endblock %}

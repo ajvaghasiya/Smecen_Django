@@ -1,0 +1,2105 @@
+{% extends 'base.html' %} {% load cms_tags menu_tags sekizai_tags %} {% load static %} {% block title %} IdeaDC | Pricing {% endblock %} {% block content %} {% static_placeholder 'Pricing_Page' %}
+
+<!-- <div role="main" class="main">
+    <section class="page-header page-header-lg custom-bg-color-light-1 border-0 m-0 image_pricing" style="background-image: url({% static 'img/demos/bg-3.jpg' %}); background-size: cover; background-position: center; height: 400px;">
+        <div class="container py-5">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 text-center mb-5 mb-lg-0">
+
+                </div>
+                <div class="col-lg-6 text-center mb-5 mb-lg-0">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100" style="padding-top: 75px;">
+                        <h3 class="position-relative text-color-light text-5 line-height-5 font-weight-medium px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorterPlus" data-plugin-options="{'minWindowWidth': 0}">
+                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="{% static 'img/slides/slide-title-border.png' %}" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                            <span class="position-relative" style="color: #000;">DO YOU NEED A NEW <span class="position-absolute left-50pct transform3dx-n50 top-0 mt-3"><img src="{% static 'img/slides/slide-blue-line.png' %}" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="2500" data-plugin-options="{'minWindowWidth': 0}" alt="" /></span></span>
+                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-3">
+                                                <img src="{% static 'img/slides/slide-title-border.png' %}" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                                            </span>
+                        </h3>
+                        <h1 class="text-color-light font-weight-extra-bold text-12 mb-2 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="1300" data-plugin-options="{'minWindowWidth': 0}"><span style="color: #000;">CLOUD PROVIDER</span></h1>
+                        <p class="text-4 text-color-dark font-weight-light opacity-7 mb-0" data-plugin-animated-letters data-plugin-options="{'startDelay': 3500, 'minWindowWidth': 0}">We make it simple to launch in the cloud and scale up as you grow – with an intuitive control panel, predictable pricing, team accounts, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="home-intro" id="home-intro">
+        <div class="container" id="top">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <p class="mb-0">
+                        The fastest way to grow your business with the low <span class="highlighted-word highlighted-word-animation-1 text-color-primary font-weight-semibold text-5" style="color:#0084ff">Pricing</span>
+                        <span>Check out our options and features included.</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row pt-4 appear-animation" data-appear-animation="fadeInUpShorter">
+            <div class="my-lg-4">
+                <h2 class="font-weight-normal line-height-1">A place where amazing things <strong class="font-weight-extra-bold">Get Done!</strong></h2>
+                <p class="lead"><strong>TWELVE (12) MONTHS FREE TO $1001.00 USD USAGE!</strong> </p>
+
+
+                <div class="row pt-4 my-5">
+                    <div class="col-lg-6">
+                        <div class="feature-box feature-box-style-2 mb-4">
+
+                            <div class="feature-box-info">
+                                <h3 class="font-weight-bold text-4 mb-0" style="background-color: #7fc3fe;">
+                                    <a class="dropdown-item" data-hash data-hash-offset="68" href="#product-1">
+                                        <img src="{% static 'img/demos/seo-2/icons/vpn.png' %}" width="100" alt="" style="padding-left:20px;" />&nbsp;&nbsp; Powerful Compute
+                                    </a>
+                                </h3>
+
+                                <p class="mb-4">You have the option of selecting the following cloud machine options depending on your application: GENERAL PURPOSE, CPU INTENSE, RAM INTENSE, STORAGE INTENSE. ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                                    blandit massa</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2 mb-4">
+
+                            <div class="feature-box-info">
+                                <h3 class="font-weight-bold text-4 mb-0" style="background-color: #7fc3fe;">
+                                    <a class="dropdown-item" data-hash data-hash-offset="68" href="#product-2"><img src="{% static 'img/demos/seo-2/icons/memory1.png' %}" width="100" alt="" style="padding-left:20px;" /> &nbsp;&nbsp; Object Storage</a>
+                                    </h2>
+
+                                    <p class="mb-4">If you need storage for access to your files, backup your in house data and machines Object Storage is a convenient way of doing this. Objects are replicated in at least triplicate (3x) in diverse data centers (&gt;60km)
+                                        to bring the resiliency to your data as needed.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2 mb-4">
+
+                            <div class="feature-box-info">
+                                <h3 class="font-weight-bold text-4 mb-0" style="background-color: #7fc3fe;">
+                                    <a class="dropdown-item" data-hash data-hash-offset="68" href="#product-3">
+                                        <img src="{% static 'img/demos/seo-2/icons/host.png' %}" width="100" alt="" style="padding-left:20px;" /> &nbsp;&nbsp; Block Storage</a>
+                                </h3>
+                                Block Storage provides you the option to get fast (400Gbps) access to your local data. Its backed up by our NVMe drives, which get you to 100,000 IOPS. Perfect for high speed database access.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="feature-box feature-box-style-2 mb-4">
+
+                            <div class="feature-box-info">
+                                <h3 class="font-weight-bold text-4 mb-0" style="background-color: #7fc3fe;">
+                                    <a class="dropdown-item" data-hash data-hash-offset="68" href="#product-4"> <img src="{% static 'img/demos/seo-2/icons/ram1.png' %}" width="100" alt="" style="padding-left:20px;" />&nbsp;&nbsp; Dedicated Cloud</a>
+                                </h3>
+
+                                <p class="mb-4">If you would like the peace of mind that you are guranteed an allocation of the specified resource such as CPU &amp; RAM, you can use this pay-as-you-go option of having a dedicated presence in the cloud.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2 mb-4">
+
+                            <div class="feature-box-info">
+                                <h3 class="font-weight-bold text-4 mb-0" style="background-color: #7fc3fe;">
+                                    <a class="dropdown-item" data-hash data-hash-offset="68" href="#product-5"> <img src="{% static 'img/demos/seo-2/icons/link.png' %}" width="100" alt="" style="padding-left:20px;" />&nbsp;&nbsp; Load Balancer</a>
+                                </h3>
+
+                                <p class="mb-4">Provision your own server in the cloud with no committment of purchasing a server, racking, stacking, configuring the OS, etc.. This is the equivalent of Dedicated Cloud along with console access to your specific server.<br>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2 mb-4">
+
+                            <div class="feature-box-info">
+                                <h3 class="font-weight-bold text-4 mb-0" style="background-color: #7fc3fe;">
+                                    <a class="dropdown-item" data-hash data-hash-offset="68" href="#product-6"> <img src="{% static 'img/demos/seo-2/icons/cloud.png' %}" width="100" alt="" style="padding-left:20px;" />&nbsp;&nbsp; Bare Metal</a>
+                                </h3>
+
+                                <p class="mb-4">Provision your own server in the cloud with no committment of purchasing a server, racking, stacking, configuring the OS, etc.. This is the equivalent of Dedicated Cloud along with console access to your specific server.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-box feature-box-style-2 mb-4">
+                            <div class="feature-box-icon">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section id="product-1" class="section position-relative custom-bg-color-light-2 border-0 pt-4 m-0">
+        <svg class="custom-section-curved-top-5" width="100%" height="284" xmlns="http://www.w3.org/2000/svg">
+                <path id="svg_2" fill="#d6f2fc" stroke="#000" stroke-width="0" d="m-30.75698,18.18081c99.6013,28.33304 337.54319,327.06425 868.97187,168.96887c265.71434,-79.04769 585.03969,-5.59538 690.67474,14.9602c105.63504,20.55559 381.87048,2.11063 555.67444,-75.27753c86.90199,-38.69407 736.04117,-78.60276 742.95015,12.26524c6.90898,90.86801 -66.08835,361.6009 -103.97283,363.40912c-37.88449,1.80823 -2793.7397,-55.67435 -2792.62804,-56.56315"/>
+            </svg>
+        <div class="container position-relative z-index-1 pb-lg-4 mb-lg-5">
+            <div class="custom-circle custom-circle-medium custom-circle-pos-44 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+                <div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}"></div>
+            </div>
+            <div class="custom-circle custom-circle-small custom-circle-pos-45 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="500">
+                <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"></div>
+            </div>
+            <div class="custom-circle custom-circle-extra-small custom-circle-pos-46 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="800">
+                <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1500}"></div>
+            </div>
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center mb-2">
+                    <span class="custom-line appear-animation" data-appear-animation="customLineAnimation" appear-animation-duration="1s"></span>
+                    <div class="overflow-hidden ml-3">
+                        <h2 class="text-color-primary font-weight-semibold line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskRight" data-appear-animation-delay="1000">WHY CHOOSE US</h2>
+                    </div>
+                </div>
+                <h3 class="text-color-secondary font-weight-bold text-transform-none text-8 mb-3 pb-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">POWERFUL COMPUTE<img src="{% static 'img/demos/seo-2/icons/vpn.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" style="padding-left:20px;" /></h3>
+
+                <p class=" b-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">You can see the option here to choose. If you are unsure of which class of VM or which VM in particular to use, please click chat to talk to an expert. .</p>
+            </div>
+            <div class="row pricing-table custom-pricing-table-style-1 justify-content-center mb-4">
+
+                <div class="row">
+                    <div class="col">
+                        <div class="tabs">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#tabsNavigationSimple1" data-toggle="tab" class="text-center">Shared Infrastructure</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tabsNavigationSimple2" data-toggle="tab" class="text-center">General Purpose</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tabsNavigationSimple3" data-toggle="tab" class="text-center">CPU Intensive</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tabsNavigationSimple4" data-toggle="tab" class="text-center">RAM Intensive</a>
+                                </li>
+
+
+
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tabsNavigationSimple1" class="tab-pane active">
+                                    <p style="color: #048ec8; font: bold; font-size: 20px;">Shared Infrastructure</p>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>CPU</th>
+                                                <th>Memory</th>
+                                                <th>Bandwidth</th>
+                                                <th>Storage</th>
+                                                <th>$Price/h </th>
+                                                <th>$Price/mo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    b1.a
+                                                </td>
+                                                <td>
+                                                    1 CPU
+                                                </td>
+                                                <td>
+                                                    1 GB
+                                                </td>
+
+                                                <td>
+                                                    1 TB
+                                                </td>
+                                                <td>
+                                                    25 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.005/hr
+                                                </td>
+                                                <td>
+                                                    $2.50/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    b1.b
+                                                </td>
+                                                <td>
+                                                    2 CPU
+                                                </td>
+                                                <td>
+                                                    2 GB
+                                                </td>
+                                                <td>
+                                                    3 TB
+                                                </td>
+                                                <td>
+                                                    50 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.015/hr
+                                                </td>
+                                                <td>
+                                                    $7.50/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    b1.c
+                                                </td>
+                                                <td>
+                                                    4 CPU
+                                                </td>
+                                                <td>
+                                                    8 GB
+                                                </td>
+                                                <td>
+                                                    5 TB
+                                                </td>
+                                                <td>
+                                                    200 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.03/hr
+                                                </td>
+                                                <td>
+                                                    $15.00/mo
+                                                </td>
+                                                <tr>
+
+                                                    <td>
+                                                        b1.d
+                                                    </td>
+                                                    <td>
+                                                        8 CPU
+                                                    </td>
+                                                    <td>
+                                                        16 GB
+                                                    </td>
+                                                    <td>
+                                                        6 TB
+                                                    </td>
+                                                    <td>
+                                                        400 GB SSD
+                                                    </td>
+                                                    <td>
+                                                        $0.06/hr
+                                                    </td>
+                                                    <td>
+                                                        $30.00/mo
+                                                    </td>
+                                                </tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="tabsNavigationSimple2" class="tab-pane">
+                                    <p style="color: #048ec8; font: bold; font-size: 20px;">General Purpose</p>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>CPU</th>
+                                                <th>Memory</th>
+                                                <th>Bandwidth</th>
+                                                <th>Storage</th>
+                                                <th>$Price/h</th>
+                                                <th>$Price/mo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    g1.a
+                                                </td>
+                                                <td>
+                                                    2 CPU
+                                                </td>
+                                                <td>
+                                                    8 GB
+                                                </td>
+                                                <td>
+                                                    4 TB
+                                                </td>
+                                                <td>
+                                                    25 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.045/hr
+                                                </td>
+                                                <td>
+                                                    $22.50/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    g1.b
+                                                </td>
+                                                <td>
+                                                    4 CPU
+                                                </td>
+                                                <td>
+                                                    16 GB
+                                                </td>
+                                                <td>
+                                                    5 TB
+                                                </td>
+                                                <td>
+                                                    50 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.10/hr
+                                                </td>
+                                                <td>
+                                                    $50.00/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    g1.c
+                                                </td>
+                                                <td>
+                                                    8 CPU
+                                                </td>
+                                                <td>
+                                                    32 GB
+                                                </td>
+                                                <td>
+                                                    6 TB
+                                                </td>
+                                                <td>
+                                                    100 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.20/hr
+                                                </td>
+                                                <td>
+                                                    $100.00/mo
+                                                </td>
+                                                <tr>
+                                                    <td>
+                                                        g1.d
+                                                    </td>
+                                                    <td>
+                                                        16 CPU
+                                                    </td>
+                                                    <td>
+                                                        64 GB
+                                                    </td>
+                                                    <td>
+                                                        7 TB
+                                                    </td>
+                                                    <td>
+                                                        200 GB SSD
+                                                    </td>
+                                                    <td>
+                                                        $0.40/hr
+                                                    </td>
+                                                    <td>
+                                                        $200.00/mo
+                                                    </td>
+                                                </tr>
+
+                                            </tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="tabsNavigationSimple3" class="tab-pane">
+                                    <p style="color: #048ec8; font: bold; font-size: 20px;">CPU Intensive</p>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>CPU</th>
+                                                <th>Memory</th>
+                                                <th>Bandwidth</th>
+                                                <th>Storage</th>
+                                                <th>$Price/h</th>
+                                                <th>$Price/mo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    c1.a
+                                                </td>
+                                                <td>
+                                                    2 CPU
+                                                </td>
+                                                <td>
+                                                    4 GB
+                                                </td>
+                                                <td>
+                                                    4 TB
+                                                </td>
+                                                <td>
+                                                    50 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.05/hr
+                                                </td>
+                                                <td>
+                                                    $25.00/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    c1.b
+                                                </td>
+                                                <td>
+                                                    4 CPU
+                                                </td>
+                                                <td>
+                                                    8 GB
+                                                </td>
+                                                <td>
+                                                    5 TB
+                                                </td>
+                                                <td>
+                                                    100 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.10/hr
+                                                </td>
+                                                <td>
+                                                    $50.00/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    c1.c
+                                                </td>
+                                                <td>
+                                                    8 CPU
+                                                </td>
+                                                <td>
+                                                    16 GB
+                                                </td>
+                                                <td>
+                                                    6 TB
+                                                </td>
+                                                <td>
+                                                    200 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.20/hr
+                                                </td>
+                                                <td>
+                                                    $100.00/mo
+                                                </td>
+                                                <tr>
+                                                    <td>
+                                                        c1.d
+                                                    </td>
+                                                    <td>
+                                                        16 CPU
+                                                    </td>
+                                                    <td>
+                                                        32 GB
+                                                    </td>
+                                                    <td>
+                                                        7 TB
+                                                    </td>
+                                                    <td>
+                                                        400 GB SSD
+                                                    </td>
+                                                    <td>
+                                                        $0.40/hr
+                                                    </td>
+                                                    <td>
+                                                        $200.00/mo
+                                                    </td>
+                                                </tr>
+                                            </tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="tabsNavigationSimple4" class="tab-pane">
+                                    <p style="color: #048ec8; font: bold; font-size: 20px;">RAM Intensive</p>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>CPU</th>
+                                                <th>Memory</th>
+                                                <th>Bandwidth</th>
+                                                <th>Storage</th>
+                                                <th>$Price/h</th>
+                                                <th>$Price/mo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    m1.a
+                                                </td>
+                                                <td>
+                                                    2 CPU
+                                                </td>
+                                                <td>
+                                                    16 GB
+                                                </td>
+                                                <td>
+                                                    4 TB
+                                                </td>
+                                                <td>
+                                                    50 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.05/hr
+                                                </td>
+                                                <td>
+                                                    $50.00/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    m1.b
+                                                </td>
+                                                <td>
+                                                    4 CPU
+                                                </td>
+                                                <td>
+                                                    32 GB
+                                                </td>
+                                                <td>
+                                                    6 TB
+                                                </td>
+                                                <td>
+                                                    100 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.10/hr
+                                                </td>
+                                                <td>
+                                                    $50.00/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    m1.c
+                                                </td>
+                                                <td>
+                                                    8 CPU
+                                                </td>
+                                                <td>
+                                                    64 GB
+                                                </td>
+                                                <td>
+                                                    7 TB
+                                                </td>
+                                                <td>
+                                                    200 GB SSD
+                                                </td>
+                                                <td>
+                                                    $0.20/hr
+                                                </td>
+                                                <td>
+                                                    $100.00/mo
+                                                </td>
+                                                <tr>
+
+                                                    <td>
+                                                        m1.d
+                                                    </td>
+                                                    <td>
+                                                        16 CPU
+                                                    </td>
+                                                    <td>
+                                                        128 GB
+                                                    </td>
+                                                    <td>
+                                                        8 TB
+                                                    </td>
+                                                    <td>
+                                                        400 GB SSD
+                                                    </td>
+                                                    <td>
+                                                        $0.40/hr
+                                                    </td>
+                                                    <td>
+                                                        $200.00/mo
+                                                    </td>
+                                                </tr>
+                                            </tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="row align-items-center justify-content-center mb-4">
+                <div class="col-lg-12 pr-lg-5 mb-5 mb-lg-0">
+                    <div class="accordion custom-accordion-style-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" id="accordion1">
+                    </div>
+
+                </div>
+                <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-hash data-hash-offset="68" href="#top">Top</a>&nbsp;&nbsp;&nbsp;
+
+                <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-hash data-hash-offset="68" href="{% url 'signup' %}">Create your account</a>
+            </div>
+        </div>
+</div>
+</div>
+</section>
+
+<section id="product-2" class="section position-relative custom-bg-color-light-2 border-0 pt-4 m-0">
+    <svg class="custom-section-curved-top-5" width="100%" height="284" xmlns="http://www.w3.org/2000/svg">
+                    <path id="svg_2" fill="#d6f2fc" stroke="#000" stroke-width="0" d="m-30.75698,18.18081c99.6013,28.33304 337.54319,327.06425 868.97187,168.96887c265.71434,-79.04769 585.03969,-5.59538 690.67474,14.9602c105.63504,20.55559 381.87048,2.11063
+                555.67444,-75.27753c86.90199,-38.69407 736.04117,-78.60276 742.95015,12.26524c6.90898,90.86801 -66.08835,361.6009 -103.97283,363.40912c-37.88449,1.80823 -2793.7397,-55.67435 -2792.62804,-56.56315"/>
+                </svg>
+    <div class="container position-relative z-index-1 pb-lg-4 mb-lg-5">
+        <div class="custom-circle custom-circle-medium custom-circle-pos-44 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+            <div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-small custom-circle-pos-45 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="500">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-extra-small custom-circle-pos-46 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="800">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1500}"></div>
+        </div>
+        <div class="col-lg-12">
+            <div class="d-flex align-items-center mb-2">
+                <span class="custom-line appear-animation" data-appear-animation="customLineAnimation" appear-animation-duration="1s"></span>
+                <div class="overflow-hidden ml-3">
+                    <h2 class="text-color-primary font-weight-semibold line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskRight" data-appear-animation-delay="1000">WHY CHOOSE US</h2>
+                </div>
+            </div>
+            <h3 class="text-color-secondary font-weight-bold text-transform-none text-8 mb-3 pb-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">OBJECT STORAGE <img src="{% static
+                            'img/demos/seo-2/icons/memory1.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" style="padding-left:20px;" /></h3>
+            <p class="mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">Set up a S3-Compatible Object Storage replicated in 3x to ensure data accessibility and resilience. Run your application stack at upto 90% more cost effective without sacrificing speed and feature set. You only for outbound bandwidth transfer
+                to the Internet and not for private traffic or for inbound bandwidth.</p>
+        </div>
+        <div class="row pricing-table custom-pricing-table-style-1 justify-content-center mb-4">
+
+            <div class="row">
+                <div class="col">
+                    <div class="tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#tabsNavigationSimple21" data-toggle="tab" class="text-center">Object Storage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tabsNavigationSimple22" data-toggle="tab" class="text-center">Bandwidth Transfer</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tabsNavigationSimple21" class="tab-pane active">
+                                <p style="color: #048ec8; font: bold; font-size: 20px;">Object Storage</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Capacity Tier
+                                            </th>
+                                            <th>
+                                                Price per GB
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                First 50GB/month
+                                            </td>
+                                            <td>
+                                                FREE
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                50GB-1TB/month
+                                            </td>
+                                            <td>
+                                                $.01/GB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1TB-20TB/month
+                                            </td>
+                                            <td>
+                                                $.008/GB
+                                            </td>
+                                            <tr>
+
+                                                <td>
+                                                    >20TB/month
+                                                </td>
+                                                <td>
+                                                    Contact Us
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="tabsNavigationSimple22" class="tab-pane">
+                                <p style="color: #048ec8; font: bold; font-size: 20px;">Bandwidth Transfer</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Bandwidth Tier</th>
+                                            <th>Unit Pricing</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                First 100 GB
+                                            </td>
+                                            <td>
+                                                FREE
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                100 GB - 999 GB
+                                            </td>
+                                            <td>
+                                                $.01/GB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                1 TB - 9.99 TB
+                                            </td>
+                                            <td>
+                                                $.008/GB
+                                            </td>
+                                            <tr>
+                                                <td>
+                                                    10 TB - 99.99 TB
+                                                </td>
+                                                <td>
+                                                    $.005/GB
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    >100 TB
+                                                </td>
+                                                <td>
+                                                    Contact Us!
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+
+        </div>
+        <div class="row align-items-center justify-content-center mb-4">
+            <div class="col-lg-12 pr-lg-5 mb-5 mb-lg-0">
+                <div class="accordion custom-accordion-style-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" id="accordion1">
+                </div>
+
+            </div>
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-hash data-hash-offset="68" href="#top">Top</a>&nbsp;&nbsp;&nbsp;
+
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-hash data-hash-offset="68" href="{% url 'signup' %}">Create your account</a>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+
+</section>
+
+<section id="product-3" class="section position-relative custom-bg-color-light-2 border-0 pt-4 m-0">
+    <svg class="custom-section-curved-top-5" width="100%" height="284" xmlns="http://www.w3.org/2000/svg">
+                    <path id="svg_2" fill="#d6f2fc" stroke="#000" stroke-width="0" d="m-30.75698,18.18081c99.6013,28.33304 337.54319,327.06425 868.97187,168.96887c265.71434,-79.04769 585.03969,-5.59538 690.67474,14.9602c105.63504,20.55559 381.87048,2.11063
+                555.67444,-75.27753c86.90199,-38.69407 736.04117,-78.60276 742.95015,12.26524c6.90898,90.86801 -66.08835,361.6009 -103.97283,363.40912c-37.88449,1.80823 -2793.7397,-55.67435 -2792.62804,-56.56315"/>
+                </svg>
+    <div class="container position-relative z-index-1 pb-lg-4 mb-lg-5">
+        <div class="custom-circle custom-circle-medium custom-circle-pos-44 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+            <div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-small custom-circle-pos-45 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="500">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-extra-small custom-circle-pos-46 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="800">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1500}"></div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center mb-2">
+                    <span class="custom-line appear-animation" data-appear-animation="customLineAnimation" appear-animation-duration="1s"></span>
+                    <div class="overflow-hidden ml-3">
+                        <h2 class="text-color-primary font-weight-semibold line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskRight" data-appear-animation-delay="1000">WHY CHOOSE US</h2>
+                    </div>
+                </div>
+                <h3 class="text-color-secondary font-weight-bold text-transform-none text-8 mb-3 pb-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">BLOCK STORAGE <img src="{% static 'img/demos/seo-2/icons/host.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" style="padding-left:20px;" /></h3>
+                <p class="mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">Connect Persistent storage to your cloud machine. All block storage devices are allocated over NVMe devices for fast IOPS provisioning or SSD for General Purpose machines. Certain features are free and are expected to remain free.</p>
+            </div>
+        </div>
+        <div class="row pricing-table custom-pricing-table-style-1 justify-content-center mb-4">
+            <div class="row">
+                <div class="col">
+                    <div class="tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#tabsNavigationSimple31" data-toggle="tab" class="text-center">Block Storage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tabsNavigationSimple32" data-toggle="tab" class="text-center">Enhanced Features</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tabsNavigationSimple31" class="tab-pane active">
+                                <p style="color: #048ec8; font: bold; font-size: 20px;">Block Storage</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Performance Tier
+                                            </th>
+                                            <th>
+                                                Price
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                1-30 GB SSD
+                                            </td>
+                                            <td>
+                                                FREE
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                31-60 GB SSD
+                                            </td>
+                                            <td>
+                                                $.075 GB/mo
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                61-100 GB SSD
+                                            </td>
+                                            <td>
+                                                $.065 GB/mo
+                                            </td>
+                                            <tr>
+
+                                                <td>
+                                                    101-1024 GB SSD
+                                                </td>
+                                                <td>
+                                                    $.05 GB/mo
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    >1 TB SSD
+                                                </td>
+                                                <td>
+                                                    Contact Us.
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="tabsNavigationSimple32" class="tab-pane">
+                                <p style="color: #048ec8; font: bold; font-size: 20px;">Enhanced Features</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Description</th>
+                                            <th>Price</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong>Snapshots</strong>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Size of Block Volume
+                                            </td>
+                                            <td>
+                                                FREE
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Additional 1 GB
+                                            </td>
+                                            <td>
+                                                Same Price as Block Volume
+                                            </td>
+                                            <tr>
+                                                <td>
+                                                    <strong>Backup</strong>
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Size of Block Volume
+                                                </td>
+                                                <td>
+                                                    FREE
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Additional 1 GB
+                                                </td>
+                                                <td>
+                                                    Same Price as Block Volume
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row"></div>
+
+        <div class="row align-items-center justify-content-center mb-4">
+            <div class="col-lg-12 pr-lg-5 mb-5 mb-lg-0">
+                <div class="accordion custom-accordion-style-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" id="accordion1">
+                </div>
+            </div>
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-hash data-hash-offset="68" href="#top">Top</a>&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-hash data-hash-offset="68" href="{% url 'signup' %}">Create your account</a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+<section id="product-4" class="section position-relative custom-bg-color-light-2 border-0 pt-4 m-0">
+    <svg class="custom-section-curved-top-5" width="100%" height="284" xmlns="http://www.w3.org/2000/svg">
+                    <path id="svg_2" fill="#d6f2fc" stroke="#000" stroke-width="0" d="m-30.75698,18.18081c99.6013,28.33304 337.54319,327.06425 868.97187,168.96887c265.71434,-79.04769 585.03969,-5.59538 690.67474,14.9602c105.63504,20.55559 381.87048,2.11063
+                        555.67444,-75.27753c86.90199,-38.69407 736.04117,-78.60276 742.95015,12.26524c6.90898,90.86801 -66.08835,361.6009 -103.97283,363.40912c-37.88449,1.80823 -2793.7397,-55.67435 -2792.62804,-56.56315"/>
+                </svg>
+    <div class="container position-relative z-index-1 pb-lg-4 mb-lg-5">
+        <div class="custom-circle custom-circle-medium custom-circle-pos-44 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+            <div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-small custom-circle-pos-45 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="500">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-extra-small custom-circle-pos-46 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="800">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1500}"></div>
+        </div>
+        <div class="col-lg-12">
+            <div class="d-flex align-items-center mb-2">
+                <span class="custom-line appear-animation" data-appear-animation="customLineAnimation" appear-animation-duration="1s"></span>
+                <div class="overflow-hidden ml-3">
+                    <h2 class="text-color-primary font-weight-semibold line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskRight" data-appear-animation-delay="1000">WHY CHOOSE US</h2>
+                </div>
+            </div>
+            <h3 class="text-color-secondary font-weight-bold text-transform-none text-8 mb-3 pb-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">DEDICATED CLOUD<img src="{% static 'img/demos/seo-2/icons/ram1.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" style="padding-left:20px;" /></h3>
+            <p class="mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendrerit vehicula leo, vel efficitur felis ultrices non. Integer aliquet ullamcorper dolor, quis sollicitudin. Integer aliquet ullamcorper dolor, quis sollicitudin.</p>
+        </div>
+        <div class="row pricing-table custom-pricing-table-style-1 justify-content-center mb-4" style="margin-right: 301px; margin-left: 25%;">
+            <div class="row">
+                <div class="col">
+                    <div class="tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#tabsNavigationSimple41" data-toggle="tab" class="text-center">Dedicated Cloud</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tabsNavigationSimple42" data-toggle="tab" class="text-center"> Dedicated Cloud - 1</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tabsNavigationSimple41" class="tab-pane active">
+                                <p style="color: #048ec8; font: bold; font-size: 20px;">Dedicated Cloud</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Storage
+                                            </th>
+                                            <th>
+                                                CPU
+                                            </th>
+                                            <th>
+                                                Memory
+                                            </th>
+                                            <th>
+                                                Bandwidth
+                                            </th>
+                                            <th>
+                                                Price
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                10 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                512 MB
+                                            </td>
+
+                                            <td>
+                                                0.50 TB
+                                            </td>
+                                            <td>
+                                                $2.50/mo
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                25 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                1024 MB
+                                            </td>
+                                            <td>
+                                                1 TB
+                                            </td>
+                                            <td>
+                                                $3.50/mo
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                55 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                2GB
+                                            </td>
+                                            <td>
+                                                2 TB
+                                            </td>
+                                            <td>
+                                                $10/mo
+                                            </td>
+
+                                            <tr>
+
+                                                <td>
+                                                    25 GB SSD
+                                                </td>
+                                                <td>
+                                                    1 CPU
+                                                </td>
+                                                <td>
+                                                    1024 MB
+                                                </td>
+                                                <td>
+                                                    1 TB
+                                                </td>
+                                                <td>
+                                                    $3.50/mo
+                                                </td>
+
+                                            </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                55 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                2GB
+                                            </td>
+                                            <td>
+                                                2 TB
+                                            </td>
+                                            <td>
+                                                $10/mo
+                                            </td>
+
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="tabsNavigationSimple42" class="tab-pane">
+                                <p style="color: #048ec8; font: bold; font-size: 20px;">Dedicated Cloud - 1</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Storage</th>
+                                            <th>CPU</th>
+                                            <th> Memory</th>
+                                            <th>Bandwidth</th>
+                                            <th>Price</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                200 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                512 MB
+                                            </td>
+
+                                            <td>
+                                                0.50 TB
+                                            </td>
+                                            <td>
+                                                $2.50/mo
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                25 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                1024 MB
+                                            </td>
+                                            <td>
+                                                1 TB
+                                            </td>
+                                            <td>
+                                                $3.50/mo
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                55 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                2GB
+                                            </td>
+                                            <td>
+                                                2 TB
+                                            </td>
+                                            <td>
+                                                $10/mo
+                                            </td>
+
+                                            <tr>
+
+                                                <td>
+                                                    25 GB SSD
+                                                </td>
+                                                <td>
+                                                    1 CPU
+                                                </td>
+                                                <td>
+                                                    1024 MB
+                                                </td>
+                                                <td>
+                                                    1 TB
+                                                </td>
+                                                <td>
+                                                    $3.50/mo
+                                                </td>
+
+                                            </tr>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                55 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                2GB
+                                            </td>
+                                            <td>
+                                                2 TB
+                                            </td>
+                                            <td>
+                                                $10/mo
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row align-items-center justify-content-center mb-4">
+            <div class="col-lg-12 pr-lg-5 mb-5 mb-lg-0">
+                <div class="accordion custom-accordion-style-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" id="accordion1">
+                </div>
+            </div>
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-hash data-hash-offset="68" href="#top">Top</a>&nbsp;&nbsp;&nbsp;
+
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-hash data-hash-offset="68" href="{% url 'signup' %}">Create your account</a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+<section id="product-5" class="section position-relative custom-bg-color-light-2 border-0 pt-4 m-0">
+    <svg class="custom-section-curved-top-5" width="100%" height="284" xmlns="http://www.w3.org/2000/svg">
+                    <path id="svg_2" fill="#d6f2fc" stroke="#000" stroke-width="0" d="m-30.75698,18.18081c99.6013,28.33304 337.54319,327.06425 868.97187,168.96887c265.71434,-79.04769 585.03969,-5.59538 690.67474,14.9602c105.63504,20.55559 381.87048,2.11063
+                555.67444,-75.27753c86.90199,-38.69407 736.04117,-78.60276 742.95015,12.26524c6.90898,90.86801 -66.08835,361.6009 -103.97283,363.40912c-37.88449,1.80823 -2793.7397,-55.67435 -2792.62804,-56.56315"/>
+                </svg>
+    <div class="container position-relative z-index-1 pb-lg-4 mb-lg-5">
+        <div class="custom-circle custom-circle-medium custom-circle-pos-44 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+            <div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-small custom-circle-pos-45 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="500">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-extra-small custom-circle-pos-46 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="800">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1500}"></div>
+        </div>
+        <div class="col-lg-12">
+            <div class="d-flex align-items-center mb-2">
+                <span class="custom-line appear-animation" data-appear-animation="customLineAnimation" appear-animation-duration="1s"></span>
+                <div class="overflow-hidden ml-3">
+                    <h2 class="text-color-primary font-weight-semibold line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskRight" data-appear-animation-delay="1000">WHY CHOOSE US</h2>
+                </div>
+            </div>
+            <h3 class="text-color-secondary font-weight-bold text-transform-none text-8 mb-3 pb-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">LOAD BALANCER <img src="{% static 'img/demos/seo-2/icons/link.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" style="padding-left:20px;" /></h3>
+            <p class="mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendrerit vehicula leo, vel efficitur felis ultrices non. Integer aliquet ullamcorper dolor, quis sollicitudin. Integer aliquet ullamcorper dolor, quis sollicitudin.</p>
+        </div>
+        <div class="row pricing-table custom-pricing-table-style-1 justify-content-center mb-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#popular50" data-toggle="tab" class="text-center">Load Balancer</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="popular50" class="tab-pane active">
+                                <p style="color: #048ec8; font: bold; font-size: 20px;">Load Balancer max</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Geekbench
+                                            </th>
+                                            <th>
+                                                Score
+                                            </th>
+                                            <th>
+                                                Storage
+                                            </th>
+                                            <th>
+                                                CPU
+                                            </th>
+                                            <th>
+                                                Memory
+                                            </th>
+                                            <th>
+                                                Bandwidth
+                                            </th>
+                                            <th>
+                                                Price
+                                            </th>
+                                            <th>
+                                                Price h </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                N/A
+                                            </td>
+                                            <td>
+                                                10 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                512 MB
+                                            </td>
+
+                                            <td>
+                                                0.50 TB
+                                            </td>
+                                            <td>
+                                                $2.50/mo
+                                            </td>
+                                            <td>
+                                                $0.004/hr
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>
+                                                2413
+                                            </td>
+                                            <td>
+                                                25 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                1024 MB
+                                            </td>
+                                            <td>
+                                                1 TB
+                                            </td>
+                                            <td>
+                                                $3.50/mo
+                                            </td>
+                                            <td>
+                                                $0.007/hr
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                3880
+                                            </td>
+                                            <td>
+                                                55 GB SSD
+                                            </td>
+                                            <td>
+                                                1 CPU
+                                            </td>
+                                            <td>
+                                                2GB
+                                            </td>
+                                            <td>
+                                                2 TB
+                                            </td>
+                                            <td>
+                                                $10/mo
+                                            </td>
+                                            <td>
+                                                $0.015/hr
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row align-items-center justify-content-center mb-4">
+            <div class="col-lg-12 pr-lg-5 mb-5 mb-lg-0">
+                <div class="accordion custom-accordion-style-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" id="accordion1">
+                </div>
+            </div>
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-hash data-hash-offset="68" href="#top">Top</a>&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-hash data-hash-offset="68" href="{% url 'signup' %}">Create your account</a>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<section id="product-6" class="section position-relative custom-bg-color-light-2 border-0 pt-4 m-0">
+    <svg class="custom-section-curved-top-5" width="100%" height="284" xmlns="http://www.w3.org/2000/svg">
+                    <path id="svg_2" fill="#d6f2fc" stroke="#000" stroke-width="0" d="m-30.75698,18.18081c99.6013,28.33304 337.54319,327.06425 868.97187,168.96887c265.71434,-79.04769 585.03969,-5.59538 690.67474,14.9602c105.63504,20.55559 381.87048,2.11063
+                555.67444,-75.27753c86.90199,-38.69407 736.04117,-78.60276 742.95015,12.26524c6.90898,90.86801 -66.08835,361.6009 -103.97283,363.40912c-37.88449,1.80823 -2793.7397,-55.67435 -2792.62804,-56.56315"/>
+                </svg>
+    <div class="container position-relative z-index-1 pb-lg-4 mb-lg-5">
+        <div class="custom-circle custom-circle-medium custom-circle-pos-44 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+            <div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-small custom-circle-pos-45 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="500">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"></div>
+        </div>
+        <div class="custom-circle custom-circle-extra-small custom-circle-pos-46 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="800">
+            <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{ 'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1500}"></div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center mb-2">
+                    <span class="custom-line appear-animation" data-appear-animation="customLineAnimation" appear-animation-duration="1s"></span>
+                    <div class="overflow-hidden ml-3">
+                        <h2 class="text-color-primary font-weight-semibold line-height-3 text-4 mb-0 appear-animation" data-appear-animation="maskRight" data-appear-animation-delay="1000">WHY CHOOSE US</h2>
+                    </div>
+                </div>
+                <h3 class="text-color-secondary font-weight-bold text-transform-none text-8 mb-3 pb-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">BARE METAL <img src="{% static 'img/demos/seo-2/icons/cloud.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" style="padding-left:20px;" /></h3>
+                <p class="mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendrerit vehicula leo, vel efficitur felis ultrices non. Integer aliquet ullamcorper dolor, quis sollicitudin. Integer aliquet ullamcorper dolor, quis sollicitudin.Cras a elit sit
+                    amet leo accumsan volutpat. Suspendisse hendrerit vehicula leo, vel efficitur felis ultrices non. Integer aliquet ullamcorper dolor, quis sollicitudin. Integer aliquet ullamcorper dolor, quis sollicitudin.</p>
+            </div>
+
+            <div class="row pricing-table custom-pricing-table-style-1 justify-content-center mb-4">
+                <div class="row">
+                    <div class="row pricing-table custom-pricing-table-style-1 justify-content-center mb-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="tabs">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#tabsNavigationSimple61" data-toggle="tab" class="text-center">Bare  Infrastructure</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabsNavigationSimple62" data-toggle="tab" class="text-center">Bare Purpose</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabsNavigationSimple63" data-toggle="tab" class="text-center">Bare  CPU Intensive</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabsNavigationSimple64" data-toggle="tab" class="text-center"> Bare  RAM  Intensive</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="tabsNavigationSimple61" class="tab-pane active">
+                                            <p style="color: #048ec8; font: bold; font-size: 20px;">Bare Shared Infrastructure</p>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Storage
+                                                        </th>
+                                                        <th>
+                                                            CPU
+                                                        </th>
+                                                        <th>
+                                                            Memory
+                                                        </th>
+                                                        <th>
+                                                            Bandwidth
+                                                        </th>
+                                                        <th>
+                                                            Price
+                                                        </th>
+                                                        <th>
+                                                            Price h
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            100 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            512 MB
+                                                        </td>
+                                                        <td>
+                                                            00.50 TB
+                                                        </td>
+                                                        <td>
+                                                            $2.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0004/hr.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            25 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            1024 MB
+                                                        </td>
+                                                        <td>
+                                                            1 TB
+                                                        </td>
+                                                        <td>
+                                                            $3.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.007/hr
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            55 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            2GB
+                                                        </td>
+                                                        <td>
+                                                            2 TB
+                                                        </td>
+                                                        <td>
+                                                            $10/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.015/hr
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>
+                                                            25 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            1024 MB
+                                                        </td>
+                                                        <td>
+                                                            1 TB
+                                                        </td>
+                                                        <td>
+                                                            $3.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.007/hr
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>
+                                                            25 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            1024 MB
+                                                        </td>
+                                                        <td>
+                                                            1 TB
+                                                        </td>
+                                                        <td>
+                                                            $3.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.007/hr
+                                                        </td>
+                                                    </tr>
+                                                    </tr>
+
+                                                    </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="tabsNavigationSimple62" class="tab-pane">
+                                            <p style="color: #048ec8; font: bold; font-size: 20px;"> Bare General Purpose</p>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Storage
+                                                        </th>
+                                                        <th>
+                                                            CPU
+                                                        </th>
+                                                        <th>
+                                                            Memory
+                                                        </th>
+                                                        <th>
+                                                            Bandwidth
+                                                        </th>
+                                                        <th>
+                                                            Price
+                                                        </th>
+                                                        <th>
+                                                            Price h </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            10 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            512 MB
+                                                        </td>
+                                                        <td>
+                                                            0.50 TB
+                                                        </td>
+                                                        <td>
+                                                            $2.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0004/hr.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>
+                                                            25 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            1024 MB
+                                                        </td>
+                                                        <td>
+                                                            1 TB
+                                                        </td>
+                                                        <td>
+                                                            $3.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.007/hr
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            55 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            2GB
+                                                        </td>
+                                                        <td>
+                                                            2 TB
+                                                        </td>
+                                                        <td>
+                                                            $10/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.015/hr
+                                                        </td>
+                                                        <tr>
+
+                                                            <td>
+                                                                25 GB SSD
+                                                            </td>
+                                                            <td>
+                                                                1 CPU
+                                                            </td>
+                                                            <td>
+                                                                1024 MB
+                                                            </td>
+                                                            <td>
+                                                                1 TB
+                                                            </td>
+                                                            <td>
+                                                                $3.50/mo
+                                                            </td>
+                                                            <td>
+                                                                $0.007/hr
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td>
+                                                                25 GB SSD
+                                                            </td>
+                                                            <td>
+                                                                1 CPU
+                                                            </td>
+                                                            <td>
+                                                                1024 MB
+                                                            </td>
+                                                            <td>
+                                                                1 TB
+                                                            </td>
+                                                            <td>
+                                                                $3.50/mo
+                                                            </td>
+                                                            <td>
+                                                                $0.007/hr
+                                                            </td>
+                                                        </tr>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="tabsNavigationSimple63" class="tab-pane">
+                                            <p style="color: #048ec8; font: bold; font-size: 20px;">Bare CPU Intensive</p>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Storage
+                                                        </th>
+                                                        <th>
+                                                            CPU
+                                                        </th>
+                                                        <th>
+                                                            Memory
+                                                        </th>
+                                                        <th>
+                                                            Bandwidth
+                                                        </th>
+                                                        <th>
+                                                            Price
+                                                        </th>
+                                                        <th>
+                                                            Price h </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            10 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            512 MB
+                                                        </td>
+                                                        <td>
+                                                            0.50 TB
+                                                        </td>
+                                                        <td>
+                                                            $2.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0004/hr.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>
+                                                            25 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            1024 MB
+                                                        </td>
+                                                        <td>
+                                                            1 TB
+                                                        </td>
+                                                        <td>
+                                                            $3.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.007/hr
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            55 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            2GB
+                                                        </td>
+                                                        <td>
+                                                            2 TB
+                                                        </td>
+                                                        <td>
+                                                            $10/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.015/hr
+                                                        </td>
+                                                        <tr>
+
+                                                            <td>
+                                                                25 GB SSD
+                                                            </td>
+                                                            <td>
+                                                                1 CPU
+                                                            </td>
+                                                            <td>
+                                                                1024 MB
+                                                            </td>
+                                                            <td>
+                                                                1 TB
+                                                            </td>
+                                                            <td>
+                                                                $3.50/mo
+                                                            </td>
+                                                            <td>
+                                                                $0.007/hr
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td>
+                                                                25 GB SSD
+                                                            </td>
+                                                            <td>
+                                                                1 CPU
+                                                            </td>
+                                                            <td>
+                                                                1024 MB
+                                                            </td>
+                                                            <td>
+                                                                1 TB
+                                                            </td>
+                                                            <td>
+                                                                $3.50/mo
+                                                            </td>
+                                                            <td>
+                                                                $0.007/hr
+                                                            </td>
+                                                        </tr>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="tabsNavigationSimple64" class="tab-pane">
+                                            <p style="color: #048ec8; font: bold; font-size: 20px;">Bare RAM Intensive</p>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Storage
+                                                        </th>
+                                                        <th>
+                                                            CPU
+                                                        </th>
+                                                        <th>
+                                                            Memory
+                                                        </th>
+                                                        <th>
+                                                            Bandwidth
+                                                        </th>
+                                                        <th>
+                                                            Price
+                                                        </th>
+                                                        <th>
+                                                            Price h </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            10 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            512 MB
+                                                        </td>
+                                                        <td>
+                                                            0.50 TB
+                                                        </td>
+                                                        <td>
+                                                            $2.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0004/hr.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>
+                                                            25 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            1024 MB
+                                                        </td>
+                                                        <td>
+                                                            1 TB
+                                                        </td>
+                                                        <td>
+                                                            $3.50/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.007/hr
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            55 GB SSD
+                                                        </td>
+                                                        <td>
+                                                            1 CPU
+                                                        </td>
+                                                        <td>
+                                                            2GB
+                                                        </td>
+                                                        <td>
+                                                            2 TB
+                                                        </td>
+                                                        <td>
+                                                            $10/mo
+                                                        </td>
+                                                        <td>
+                                                            $0.015/hr
+                                                        </td>
+                                                        <tr>
+
+                                                            <td>
+                                                                25 GB SSD
+                                                            </td>
+                                                            <td>
+                                                                1 CPU
+                                                            </td>
+                                                            <td>
+                                                                1024 MB
+                                                            </td>
+                                                            <td>
+                                                                1 TB
+                                                            </td>
+                                                            <td>
+                                                                $3.50/mo
+                                                            </td>
+                                                            <td>
+                                                                $0.007/hr
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                25 GB SSD
+                                                            </td>
+                                                            <td>
+                                                                1 CPU
+                                                            </td>
+                                                            <td>
+                                                                1024 MB
+                                                            </td>
+                                                            <td>
+                                                                1 TB
+                                                            </td>
+                                                            <td>
+                                                                $3.50/mo
+                                                            </td>
+                                                            <td>
+                                                                $0.007/hr
+                                                            </td>
+                                                        </tr>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div>&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            </div>
+            <div class="row align-items-center justify-content-center mb-4" style="margin-right: 301px;margin-left: 25%">
+                <div class="col-lg-12 pr-lg-5 mb-5 mb-lg-0">
+                    <div class="accordion custom-accordion-style-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600" id="accordion1">
+                    </div>
+                </div>
+                <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" data-hash data-hash-offset="68" href="#top">Top</a>&nbsp;&nbsp;&nbsp;
+                <a class="btn btn-gradient btn-rounded font-weight-semibold px-5 py-3 text-3 mb-md-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-hash data-hash-offset="68" href="{% url 'signup' %}">Create your account</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="section section-with-shape-divider section-height-3 bg-tertiary border-0 m-0">
+    <div class="shape-divider" style="height: 116px;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 116" preserveAspectRatio="xMinYMin">
+                        <path class="custom-svg-fill-color-tertiary-darken" d="M0,24c2.86,0.42,7.41,1.1,13,2c6.13,0.98,10.67,1.77,12,2c11.67,2.01,42.24,7.05,68,11 c7.79,1.2,22.72,3.48,41,6c20.75,2.86,38.83,5.06,74,9c41.19,4.61,62.09,6.95,93,10c57.4,5.66,101.17,9.03,114,10
+                c9.13,0.69,40.29,3.02,109,7c48.33,2.8,87.04,5.04,132,7c76.86,3.35,135.02,4.27,184,5c104.27,1.56,187.39,0.71,234,0 c21.92-0.34,91.62-1.5,183-5c50.62-1.94,106.43-4.12,181-9c57.01-3.73,108.05-7.94,152-12c94.91-8.78,162.37-17.44,182-20 c41.76-5.45,72.06-10.09,96-14c21.23-3.47,39.04-6.63,52-9c0-11.67,0-23.33,0-35C1279-11,638-11-3-11C-2,0.67-1,12.33,0,24z"/>
+                        <path fill="#F7F7F7" d="M-7,23c1.59,0.23,4.03,0.58,7,1c82.06,11.6,145.17,16.35,182,19c244.62,17.62,377,23,377,23 c157.86,6.42,277.64,7.71,308,8c75.8,0.73,232.89,1.31,438-6c0,0,137.72-4.66,358-19c42.98-2.8,104.01-7.03,183-16 c33.26-3.78,60.85-7.38,80-10c0-9.01,0-18.01,0-27.02c-644,0-1288,0-1932,0C-6.33,4.99-6.67,13.99-7,23z"/>
+                    </svg>
+    </div>
+    <div class="container pt-4 pb-3 mt-5">
+        <div class="row align-items-center justify-content-center pt-3">
+            <div class="col-md-9 col-lg-7 col-xl-9 text-center text-xl-left mb-4 mb-xl-0">
+                <h2 class="text-color-light font-weight-medium line-height-4 text-9 negative-ls-1 mb-2">For <span class="font-weight-extra-bold custom-highlight-1 p-1 appear-animation" data-appear-animation="customHighlightAnim" data-appear-animation-delay="300">Residential and Commercial</span> Cleaning</h2>
+                <p class="custom-font-secondary custom-font-size-1 font-weight-light text-color-light opacity-8 mb-0">Our Staff is trained to clean everything you need!</p>
+            </div>
+            <div class="col-xl-3 text-center text-xl-right">
+                <div class="position-relative">
+                    <a href="demo-cleaning-services-contact.html" class="btn btn-secondary btn-modern font-weight-bold text-3 btn-px-4 py-3">BOOK NOW IN 60 SECONDS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div> -->
+
+
+{% endblock content %}

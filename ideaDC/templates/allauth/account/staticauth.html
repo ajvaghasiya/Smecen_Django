@@ -1,0 +1,374 @@
+{% load static %}
+{% block head %}
+	<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<title>{% block title %} IdeaDC {% endblock title %} </title>	
+
+		<meta name="keywords" content="ssd, ram, server" />
+		<meta name="description" content="IdeaDc - Start Growing Your Business Trough Better ">
+		<meta name="author" content="ideadc.com">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'img/logos/favicon.ico' %}" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="{% static 'img/logos/dc.png' %}">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/animate/animate.compat.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.theme.default.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/magnific-popup/magnific-popup.min.css' %}">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{% static 'css/theme.css' %}">
+		<link rel="stylesheet" href="{% static 'css/theme-elements.css' %}">
+		<link rel="stylesheet" href="{% static 'css/theme-blog.css' %}">
+		<link rel="stylesheet" href="{% static 'css/theme-shop.css' %}">
+
+
+		<!-- Demo CSS -->
+		<link rel="stylesheet" href="{% static 'css/demos/demo-seo-2.css' %}">
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="{% static 'css/skins/skin-seo-2.css"' %}> 
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{% static 'custom.css' %}">
+
+		<!-- Head Libs -->
+		<!--Start of Tawk.to Script-->
+		<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/5fe42cefa8a254155ab60263/1eq9kv2ag';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
+		</script>
+		<!--End of Tawk.to Script-->
+{% endblock head %}
+
+{% block header %}
+    <header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyChangeLogo': true, 'stickyStartAt': 70, 'stickyHeaderContainerHeight': 70}">
+		<div class="header-body border-top-0 appear-animation" data-appear-animation="fadeIn">
+			<div class="header-top">
+				<div class="container">
+					<div class="header-row">
+						<div class="header-column justify-content-start">
+							<div class="header-row">
+								<nav class="header-nav-top">
+									<ul class="nav nav-pills">
+										<li class="nav-item">
+											<span class="ws-nowrap custom-text-color-grey-1 text-2 pl-0"><i class="icon-envelope icons text-4 top-3 left-1 mr-1"></i> <a href="mailto:office@ideadc.com" class="text-color-default text-color-hover-primary">office@ideadc.com</a></span>
+										</li>
+										<li class="nav-item d-none d-md-block">
+											<span class="ws-nowrap custom-text-color-grey-1 text-2">
+												<i class="icon-clock icons text-4 top-3 left-1 mr-1"></i>
+												Support 24X7 
+												<i class="icon-arrow-up-circle icons text-4 top-3 left-1 mr-1"></i>
+												<i class="icon-arrow-up-circle icons text-4 top-3 left-1 mr-1"></i>
+											</span>
+											
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="header-column justify-content-end">
+							<div class="header-row">
+								<ul class="header-social-icons social-icons social-icons-clean d-none d-lg-block mr-3">
+									<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+									<li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+									<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+								</ul>
+								<div class="col-lg-5">
+
+							
+							<div class="btn-group-toggle" data-toggle="buttons" style="margin-top: 5px">
+								
+						{% if user.is_authenticated %}
+							{% comment %} <label>Hello {{user.username}}</label> {% endcomment %}
+						
+							<label><a href= "{% url 'account_change_password' %} ">
+								<button type="button" class="btn btn-outline btn-primary btn-xs mb-2">Change Password</button>
+							</a></label>
+								<label><a href= "{% url 'logout' %} ">
+								<button type="button" class="btn btn-primary btn-xs mb-2">Log Out</button>
+								</a></label>
+						{% else %}
+							<label><a href=" {% url 'login' %} " >
+								<button type="button" class="btn btn-outline btn-primary btn-xs mb-2">Log In</button>
+								</a></label>
+								
+							<label><a href= "{% url 'signup' %} ">
+								<button type="button" class="btn btn-primary btn-xs mb-2">Sign Up</button>
+								</a></label>
+							{% endif %}
+							</div>
+							
+						</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-container container">
+				<div class="header-row">
+					<div class="header-column">
+						<div class="header-row">
+							<div class="header-logo">
+								<a href="{% url 'home' %}">
+									<img alt="ideadc" width="165" height="55" src="{% static 'img/demos/seo-2/logo2.png' %}">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="header-column justify-content-end">
+						<div class="header-row">
+							<div class="header-nav header-nav-links order-2 order-lg-1">
+								<div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
+									<nav class="collapse">
+										<ul class="nav nav-pills" id="mainNav">
+											<li>
+												<a class="nav-link active" href="{% url 'home' %}">
+													Home
+												</a>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-item dropdown-toggle " href="{% url 'product' %}">
+													Products
+												</a>
+												<ul class="dropdown-menu">
+											<li>
+												<a class="dropdown-item" data-hash data-hash-offset="68" href="{% url 'product' %}#product-1">Powerful Compute</a>
+											</li>
+											<li>
+												<a class="dropdown-item" data-hash data-hash-offset="68" href="{% url 'product' %}#product-2">Object Storage</a>
+											</li>
+											<li>
+												<a class="dropdown-item" data-hash data-hash-offset="68" href="{% url 'product' %}#product-3">Block Storage</a>
+											</li>
+											<li>
+												<a class="dropdown-item" data-hash data-hash-offset="68" href="{% url 'product' %}#product-4">Dedicated Cloud</a>
+											</li>
+											<li>
+												<a class="dropdown-item" data-hash data-hash-offset="68" href="{% url 'product' %}#product-5">Load Balancer</a>
+											</li>
+											<li>
+												<a class="dropdown-item" data-hash data-hash-offset="68" href="{% url 'product' %}#product-6">Bare Metal</a>
+											</li>
+												
+												</ul>
+											</li>
+											<li>
+												<a class="nav-link" href="{% url 'pricing' %}">
+													Pricing
+												</a>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-item dropdown-toggle" href="{% url 'support' %}">
+													Support
+												</a>
+												<ul class="dropdown-menu">
+													<li>
+														<a class="nav-link" href="#">Knowledge Base Article</a>
+													</li>
+													<li>
+														<a class="nav-link" href="{% url 'video' %}">How To Videos</a>
+													</li>
+													<li>
+														<a class="nav-link" href="{% url 'support' %}">Terms of Service</a>
+													</li>
+													<li>
+														<a class="nav-link" href="{% url 'privacy-policy' %}">Privacy Policy</a>
+													</li>
+													
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="nav-link" href="{% url 'contact' %}">
+													Contact Us
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+									<i class="fas fa-bars"></i>
+								</button>
+							</div>
+							<div class="header-nav-features header-nav-features-no-border header-nav-features-lg-show-border order-1 order-lg-2">
+								<div class="header-nav-feature header-nav-features-search d-inline-flex">
+									
+									<div class="header-nav-features-dropdown" id="headerTopSearchDropdown">
+										<form role="search" action="page-search-results.html" method="get">
+											<div class="simple-search input-group">
+												<input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+												<span class="input-group-append">
+													<button class="btn" type="submit">
+														<i class="fa fa-search header-nav-top-icon"></i>
+													</button>
+												</span>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+{% endblock header %}
+
+{% block content %}
+
+
+{% endblock content %}
+
+{% block js %}
+        <!-- Vendor -->
+		<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.appear/jquery.appear.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.cookie/jquery.cookie.min.js' %}"></script>
+		<script src="{% static 'vendor/popper/umd/popper.min.js' %}"></script>
+		<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'vendor/common/common.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.validation/jquery.validate.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.gmap/jquery.gmap.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.lazyload/jquery.lazyload.min.js' %}"></script>
+		<script src="{% static 'vendor/isotope/jquery.isotope.min.js' %}"></script>
+		<script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'vendor/vide/jquery.vide.min.js' %}"></script>
+		<script src="{% static 'vendor/vivus/vivus.min.js' %}"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static 'js/theme.js' %}"></script>
+
+		<!-- Current Page Vendor and Views -->
+
+
+
+
+		<!-- Demo -->
+		<script src="{% static 'js/demos/demo-seo-2.js' %}"></script>
+
+		<!-- Theme Custom -->
+		<script src="{% static 'js/custom.js' %}"></script>
+
+
+		<!-- Theme Initialization Files -->
+		<script src="{% static 'js/theme.init.js' %}"></script>
+
+{% endblock js %}
+
+
+{% block footer %}
+	<footer id="footer" class="bg-color-quaternary position-relative mt-0">
+				
+				<div class="container mt-0 mb-4">
+					<div class="row py-5">
+						<div class="col-lg-3 mb-5 mb-lg-0">
+							<h4 class="font-weight-bold text-color-light text-5 ls-0 pb-1 mb-2">ABOUT US</h4>
+							<p>Dedicated Engineers cohesively providing you better ways of utilizing the cloud cheaper, easier, and more robust.</p>
+							<a href="{% url 'home' %}">
+								<img src="{% static 'img/demos/seo-2/logo-footer.png' %}" class="img-fluid" alt="Demo SEO 2" />
+							</a>
+						</div>
+						<div class="col-lg-3 mb-4 mb-lg-0">
+							<h4 class="font-weight-bold text-color-light text-5 ls-0 pb-1 mb-2">USEFUL LINKS</h4>
+							<ul class="list list-unstyled">
+								<li class="mb-1">
+									<a href="{% url 'home' %}">Home</a>
+								</li>
+								<li class="mb-1">
+									<a href="{% url 'product' %}">Products</a>
+								</li>
+								<li class="mb-1">
+									<a href="{% url 'pricing' %}">Pricing</a>
+								</li>
+								<li class="mb-1">
+									<a href="{% url 'support' %}">Support</a>
+								</li>
+								
+								<li class="mb-1">
+									<a href="{% url 'contact' %}">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 mb-4 mb-lg-0">
+							<h4 class="font-weight-bold text-color-light text-5 ls-0 pb-1 mb-2">OUR PRODUCTS</h4>
+							<ul class="list list-unstyled">
+								<li class="mb-1">
+									<a href="#">Powerful Compute</a>
+								</li>
+								<li class="mb-1">
+									<a href="#">Object Storage</a>
+								</li>
+								<li class="mb-1">
+									<a href="#">Dedicated Cloud</a>
+								</li>
+								
+									<a href="#">Block Storage</a>
+								</li>
+								
+								<li class="mb-1">
+									<a href="#">Load Balancers</a>
+								</li>
+								<li class="mb-1">
+									<a href="#">Bare Metal</a>
+								</li>
+								
+							</ul>
+						</div>
+						<div class="col-lg-3">
+							<h4 class="font-weight-bold text-color-light text-5 ls-0 pb-1 mb-2">CONTACT US</h4>
+							<ul class="list list-unstyled">
+								<li class="mb-1">
+								   544 Harrison Ave, Harrison,<br> NY  10528 </li>
+								<li class="mb-1">
+									Phone: <a href="tel:+1 914 582-8130">+1 914 582-8130</a>
+								</li>
+								<li class="mb-1">
+									Email: <a href="#">office@ideadc.com</a>
+								</li>
+							</ul>
+							<ul class="social-icons custom-social-icons-style-1">
+								<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+							  <li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+								<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright bg-color-quaternary">
+					<div class="container py-2">
+						<hr class="bg-color-light opacity-1 mb-0">
+						<div class="row justify-content-center py-4">
+							<div class="col-auto">
+								<p class="text-color-light opacity-5 text-3">ideaDC © Copyright 2020. All Rights Reserved.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+{% endblock footer %}

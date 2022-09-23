@@ -1,0 +1,32 @@
+@media (max-width:1300px) {
+
+}
+
+/************ Main **************/
+@media (max-width: 991px) {
+.creat_info{ padding:25px;}
+.social_signin{ padding:20px 25px;}
+.signup_left h2{ font-size:20px;}
+.signup_logo{ margin-bottom:40px;}
+.signup_form{ padding:30px 25px 25px 25px;}
+}
+
+@media (max-width: 767px) {
+.login_sec{ margin-top:0;}
+.login_sec .form-group{ margin-bottom:18px;}
+.login_sec .btn-block{ margin-top:0;}
+
+/************ Varify Page 16-4-2021 ************/
+.varify_inn.signup_form{ padding:20px 30px 0 30px;}
+.varify_sec h3{ font-size:17px;}
+.varify_sec .or{ margin-top:60px;}
+}
+
+/************ iphone **************/
+@media (max-width:600px) {
+/************ Varify Page 16-4-2021 ************/
+.varify_sec .form-group{ min-height:inherit;}
+.varify_sec .or{ margin:0 0 30px 0;}
+
+
+}

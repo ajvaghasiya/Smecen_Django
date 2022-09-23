@@ -1,0 +1,560 @@
+{% extends 'base.html' %} 
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %} 
+{% block title %} IdeaDC | Products {% endblock %}
+{% block content %}
+
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<title>IdeaDC | Products</title>	
+
+		<meta name="keywords" content="ssd, ram, server" />
+		<meta name="description" content="IdeaDc - Start Growing Your Business Trough Better ">
+		<meta name="author" content="ideadc.com">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{% static 'img/logos/favicon.ico' %}" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="{% static 'img/logos/dc.png' %}">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/animate/animate.compat.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.theme.default.min.css' %}">
+		<link rel="stylesheet" href="{% static 'vendor/magnific-popup/magnific-popup.min.css' %}">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{% static 'css/theme.css' %}">
+		<link rel="stylesheet" href="{% static 'css/theme-elements.css' %}">
+		<link rel="stylesheet" href="{% static 'css/theme-blog.css' %}">
+		<link rel="stylesheet" href="{% static 'css/theme-shop.css' %}">
+
+
+		<!-- Demo CSS -->
+		<link rel="stylesheet" href="{% static 'css/demos/demo-seo-2.css' %}">
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="{% static 'css/skins/skin-seo-2.css' %}"> 
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+		<!-- Head Libs -->
+		<script src="{% static 'vendor/modernizr/modernizr.min.js' %}"></script>
+
+	</head>
+	<body data-target="#header" class="product_listing" data-spy="scroll" data-offset="100">
+		<div class="body">
+		 {% static_placeholder 'Products_Page' %}
+			  {% comment %} <div role="main" class="main">
+
+				<section class="page-header page-header-lg custom-bg-color-light-1 border-0 m-0">
+					<div class="container position-relative pt-5 pb-4 mt-5">
+						<div class="custom-circle custom-circle-wrapper custom-circle-big custom-circle-pos-1 custom-circle-pos-1-1 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="900" data-appear-animation-duration="2s">
+							<div class="bg-color-tertiary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-2 custom-circle-pos-2-2 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1450" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.2, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-3 custom-circle-pos-3-3 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="1300">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-4 custom-circle-pos-4-4 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="1600">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.6, 'transition': true, 'transitionDuration': 500}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-5 custom-circle-pos-5-5 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1050" data-appear-animation-duration="2s">
+							<div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.2, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-6 custom-circle-pos-6-6 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 500}"></div>
+						</div>
+						<div class="row py-5 mb-5 mt-2 p-relative z-index-1">
+							<div class="col">
+								<div class="overflow-hidden">
+									<ul class="breadcrumb d-block text-center appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="800">
+										<li ><a style="color: #0084ff;" href="{% url 'home' %}">Home</a></li>
+										<li class="active">product</li>
+									</ul>
+								</div>
+								<div class="overflow-hidden mb-4">
+									<h1 class="d-block text-color-quaternary font-weight-bold text-center mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1000">NEW Products</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section bg-color-light position-relative border-0 pt-0 m-0">
+					<svg class="custom-section-curved-top-3" width="100%" height="298" xmlns="http://www.w3.org/2000/svg">
+						<path id="svg_2" fill="#FFF" stroke="#000" stroke-width="0" d="m-19.87006,126.33922c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c52.17748,6.59421 -86.4742,-15.61273 171.02458,26.26208c64.37469,10.4687 130.09704,0.19531 175.01626,-5.4736c44.91922,-5.66892 49.93384,-12.28022 191.44685,-45.34647c141.51301,-33.06625 221.34662,-61.99188 426.81438,-59.4919c102.73388,1.24999 203.44102,29.65927 398.99543,109.88821c195.55441,80.22895 668.78972,-44.38181 814.0537,-9.88704c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"/>
+					</svg>
+					<div id="product-1"  class="container position-relative z-index-1 pb-5 mb-5">
+						<div class="custom-circle custom-circle-medium custom-circle-pos-17 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+							<div class="bg-color-quaternary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2000}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-18 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="400">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2500}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-19 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="600">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>	
+						</div>
+							
+						
+						<div class="row justify-content-center pb-2 mb-4">
+							<div class="col-md-12 col-lg-12 mb-12 mb-lg-0">
+							  <div class="card border-0 custom-box-shadow-1 custom-border-radius-1 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-plugin-options="{'accY': -100}">
+									<div class="custom-dots-rect-3" style="background-image: url("{% static 'img/demos/seo-2/dots-group-3.png' %}");"></div>
+									<div class="card-body text-center p-5">
+										<div class="row justify-content-center mb-4">
+							<div class="col-8 text-center">
+								
+								<div class="overflow-hidden mb-2">
+								<h2 class="font-weight-bold text-color-quaternary text-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="350">Powerful Compute</h2>
+								</div>
+								<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Provision computing power measured in GHz, RAM, and storage capacity instantly.&nbsp; &nbsp;</p>
+							</div>
+						</div>
+										<img src="{% static 'img/demos/seo-2/icons/vpn.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" />
+										<h4 class="text-color-dark font-weight-semibold mb-3">Powerful Compute</h4>
+										<p>There are different classes of Computing choices to pick based n your application:&nbsp; General Purpose, CPU-Intense, Memory-Intense, and Storage-Intense.&nbsp; &nbsp;</p>
+										<div class="col text-center">
+								<div class="overflow-hidden">
+									<a href="{% url 'pricing' %}#product-1" class="btn btn-secondary btn-outline btn-rounded font-weight-bold px-5 py-3 text-3 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="250">PRICING</a>
+								</div>
+							</div>
+									</div>
+							  </div>
+								
+							</div>
+							
+							
+								
+							</div>
+						</div>
+						
+						<div class="custom-circle custom-circle-big custom-circle-pos-20 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="200" data-appear-animation-duration="2s">
+							<div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 1, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-21 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-22 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 3000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-23 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1500}"></div>
+						</div>
+					</div>
+				</section>
+				<section class="section bg-color-light position-relative border-0 pt-0 m-0">
+					<svg class="custom-section-curved-top-3" width="100%" height="298" xmlns="http://www.w3.org/2000/svg">
+						<path id="svg_2" fill="#FFF" stroke="#000" stroke-width="0" d="m-19.87006,126.33922c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c52.17748,6.59421 -86.4742,-15.61273 171.02458,26.26208c64.37469,10.4687 130.09704,0.19531 175.01626,-5.4736c44.91922,-5.66892 49.93384,-12.28022 191.44685,-45.34647c141.51301,-33.06625 221.34662,-61.99188 426.81438,-59.4919c102.73388,1.24999 203.44102,29.65927 398.99543,109.88821c195.55441,80.22895 668.78972,-44.38181 814.0537,-9.88704c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"/>
+					</svg>
+					<div id="product-2"  class="container position-relative z-index-1 pb-5 mb-5">
+						<div class="custom-circle custom-circle-medium custom-circle-pos-17 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+							<div class="bg-color-quaternary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2000}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-18 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="400">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2500}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-19 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="600">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>	
+						</div>
+							
+						
+						
+							<div class="col-md-12 col-lg-12 ">
+								<div class="card border-0 custom-box-shadow-1 custom-border-radius-1 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="250">
+									<div class="card-body text-center p-5">
+										<div class="row justify-content-center mb-4">
+							<div class="col-8 text-center">
+								
+								<div class="overflow-hidden mb-2">
+								<h2 class="font-weight-bold text-color-quaternary text-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="350">Object Storage</h2>
+								</div>
+								<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Meet Highly Available storage demands for backup disaster recovery, file sharing, or archiving needs&nbsp;</p>
+							</div>
+						</div>
+										<img src="{% static 'img/demos/seo-2/icons/memory1.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" />
+									  <h4 class="text-color-dark font-weight-semibold mb-3">Object Storage&nbsp;</h4>
+										<p>IdeaDC keeps your storage encrypted at rest, as well as replicating your objects to multiple availability zones.<br>
+									    S3 compatible API's for seamless migration. </p>
+										<div class="row mb-4">
+							<div class="col text-center">
+								<div class="overflow-hidden">
+								  <a href="{% url 'pricing' %}#product-2" class="btn btn-secondary btn-outline btn-rounded font-weight-bold px-5 py-3 text-3 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="250">PRICING</a>
+								</div>
+							</div>
+						</div>
+									</div>
+								</div>
+								
+							</div>
+							
+						
+						</div>
+						
+						<div class="custom-circle custom-circle-big custom-circle-pos-20 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="200" data-appear-animation-duration="2s">
+							<div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 1, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-21 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-22 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 3000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-23 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1500}"></div>
+						</div>
+					</div>
+				</section>
+				<section class="section bg-color-light position-relative border-0 pt-0 m-0">
+					<svg class="custom-section-curved-top-3" width="100%" height="298" xmlns="http://www.w3.org/2000/svg">
+						<path id="svg_2" fill="#FFF" stroke="#000" stroke-width="0" d="m-19.87006,126.33922c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c52.17748,6.59421 -86.4742,-15.61273 171.02458,26.26208c64.37469,10.4687 130.09704,0.19531 175.01626,-5.4736c44.91922,-5.66892 49.93384,-12.28022 191.44685,-45.34647c141.51301,-33.06625 221.34662,-61.99188 426.81438,-59.4919c102.73388,1.24999 203.44102,29.65927 398.99543,109.88821c195.55441,80.22895 668.78972,-44.38181 814.0537,-9.88704c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"/>
+					</svg>
+					<div id="product-3"  class="container position-relative z-index-1 pb-5 mb-5">
+						<div class="custom-circle custom-circle-medium custom-circle-pos-17 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+							<div class="bg-color-quaternary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2000}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-18 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="400">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2500}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-19 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="600">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>	
+						</div>
+							
+						
+						<div class="row justify-content-center pb-2 mb-4">
+							<div class="col-md-12 col-lg-12 mb-4 mb-lg-0">
+						    &nbsp; </div>
+							
+							<div class="col-md-12 col-lg-a2">
+								<div class="card border-0 custom-box-shadow-1 custom-border-radius-1 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500" data-plugin-options="{'accY': -100}">
+									<div class="card-body text-center p-5">
+										<div class="row justify-content-center mb-4">
+							<div class="col-8 text-center">
+								
+								<div class="overflow-hidden mb-2">
+								<h2 class="font-weight-bold text-color-quaternary text-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="350">Block Storage</h2>
+								</div>
+								<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Block Storage provides the ability to directly connect your Cloud machines to LAN based high speed  storage, providing upto 100,000 IOPS.</p>
+							</div>
+						</div>
+										<img src="{% static 'img/demos/seo-2/icons/host.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" />
+										<h4 class="text-color-dark font-weight-semibold mb-3">Block Storage</h4>
+										<p>Directly connect your cloud machine over a 400 Gbps network allowing you to fully utilize our NVMe capacity.&nbsp; You have the options of moving Block Storage from one machine to another, as well as save your cloud machine quickly via a snapshot.</p>
+										<div class="row mb-4">
+							<div class="col text-center">
+							  <div class="overflow-hidden">
+									<a href="{% url 'pricing' %}#product-3" class="btn btn-secondary btn-outline btn-rounded font-weight-bold px-5 py-3 text-3 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="250">PRICING</a>
+								</div>
+							</div>
+						</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="custom-circle custom-circle-big custom-circle-pos-20 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="200" data-appear-animation-duration="2s">
+							<div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 1, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-21 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-22 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 3000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-23 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1500}"></div>
+						</div>
+					</div>
+				</section>
+				<section class="section bg-color-light position-relative border-0 pt-0 m-0">
+					<svg class="custom-section-curved-top-3" width="100%" height="298" xmlns="http://www.w3.org/2000/svg">
+						<path id="svg_2" fill="#FFF" stroke="#000" stroke-width="0" d="m-19.87006,126.33922c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c52.17748,6.59421 -86.4742,-15.61273 171.02458,26.26208c64.37469,10.4687 130.09704,0.19531 175.01626,-5.4736c44.91922,-5.66892 49.93384,-12.28022 191.44685,-45.34647c141.51301,-33.06625 221.34662,-61.99188 426.81438,-59.4919c102.73388,1.24999 203.44102,29.65927 398.99543,109.88821c195.55441,80.22895 668.78972,-44.38181 814.0537,-9.88704c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"/>
+					</svg>
+					<div id="product-4"  class="container position-relative z-index-1 pb-5 mb-5">
+						<div class="custom-circle custom-circle-medium custom-circle-pos-17 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+							<div class="bg-color-quaternary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2000}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-18 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="400">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2500}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-19 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="600">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>	
+						</div>
+							
+						<div class="row justify-content-center mb-4">
+							
+						</div>
+						<div class="row justify-content-center pb-2 mb-4">
+							<div class="col-md-12 col-lg-12 mb-4 mb-lg-0">
+								<div class="card border-0 custom-box-shadow-1 custom-border-radius-1 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-plugin-options="{'accY': -100}">
+									<div class="custom-dots-rect-3" style="background-image: url({ % static 'img/demos/seo-2/dots-group-3.png' %});"></div>
+									<div class="card-body text-center p-5">
+										<div class="row justify-content-center mb-4">
+							<div class="col-8 text-center">
+								
+								<div class="overflow-hidden mb-2">
+								<h2 class="font-weight-bold text-color-quaternary text-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="350">Dedciated Cloud</h2>
+								</div>
+								<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Provision your resources without having to worry about security.&nbsp; You can have your resources entirely in your own private IP range.&nbsp; We segment further so nobody other then you are ever traversing your own network&nbsp;</p>
+							</div>
+						</div>
+										<img src="{% static 'img/demos/seo-2/icons/ram1.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" />
+										<h4 class="text-color-dark font-weight-semibold mb-3">Dedicated Cloud</h4>
+										<p>Every customer gets their own VLAN.&nbsp; Zero bandwidth or setup charges to connect to your own resources together.&nbsp;<br>
+										For example, what are the bandwidth charges of transferring 50 GB from one IdeaDC location to another IdeaDC location? $0.00, or if you prefer €0,00.</p>
+										<div class="row mb-4">
+							<div class="col text-center">
+								
+								<div class="overflow-hidden">
+									<a href="{% url 'pricing' %}#product-4" class="btn btn-secondary btn-outline btn-rounded font-weight-bold px-5 py-3 text-3 appear-an4mation" data-appear-animation="maskUp" data-appear-animation-delay="250">PRICING</a>
+								</div>
+							</div>
+						</div>
+									</div>
+								</div>
+								
+							</div>
+							
+							
+						</div>
+						
+						<div class="custom-circle custom-circle-big custom-circle-pos-20 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="200" data-appear-animation-duration="2s">
+							<div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 1, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-21 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-22 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 3000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-23 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1500}"></div>
+						</div>
+					</div>
+				</section>
+				<section class="section bg-color-light position-relative border-0 pt-0 m-0">
+					<svg class="custom-section-curved-top-3" width="100%" height="298" xmlns="http://www.w3.org/2000/svg">
+						<path id="svg_2" fill="#FFF" stroke="#000" stroke-width="0" d="m-19.87006,126.33922c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c52.17748,6.59421 -86.4742,-15.61273 171.02458,26.26208c64.37469,10.4687 130.09704,0.19531 175.01626,-5.4736c44.91922,-5.66892 49.93384,-12.28022 191.44685,-45.34647c141.51301,-33.06625 221.34662,-61.99188 426.81438,-59.4919c102.73388,1.24999 203.44102,29.65927 398.99543,109.88821c195.55441,80.22895 668.78972,-44.38181 814.0537,-9.88704c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"/>
+					</svg>
+					<div id="product-5"  class="container position-relative z-index-1 pb-5 mb-5">
+						<div class="custom-circle custom-circle-medium custom-circle-pos-17 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+							<div class="bg-color-quaternary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2000}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-18 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="400">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2500}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-19 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="600">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>	
+						</div>
+							
+						
+						<div class="row justify-content-center pb-2 mb-4">
+							<div class="col-md-12 col-lg-12 mb-4 mb-lg-0">
+								<div class="card border-0 custom-box-shadow-1 custom-border-radius-1 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-plugin-options="{'accY': -100}">
+									<div class="custom-dots-rect-3" style="background-image: url("{% static 'img/demos/seo-2/dots-group-3.png' %}");"></div>
+									<div class="card-body text-center p-5">
+										<div class="row justify-content-center mb-4">
+							<div class="col-8 text-center">
+								
+								<div class="overflow-hidden mb-2">
+								<h2 class="font-weight-bold text-color-quaternary text-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="350">Load Balancer</h2>
+								</div>
+								<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Have your active traffic not be disrupted by temporary network disruptions, hardware issues, or software mis-configurations.&nbsp; &nbsp; &nbsp;</p>
+							</div>
+						</div>
+										<img src="{% static 'img/demos/seo-2/icons/link.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" />
+										<h4 class="text-color-dark font-weight-semibold mb-3">Load Balancer</h4>
+										<p>When you have the requirement of 99.999% uptime for applications such as HTTPS (Web), SIP (Voice-over-IP), IMAP/SMTP (Email), etc.. over multiple availability zones or even data center locations a Load Balancer will make sure your traffic utilizes your resources efficiently while giving you stability.&nbsp;&nbsp;</p>
+										<div class="row mb-4">
+							<div class="col text-center">
+								<div class="overflow-hidden">
+									<a href="{% url 'pricing' %}#product-5" class="btn btn-secondary btn-outline btn-rounded font-weight-bold px-5 py-3 text-3 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="250">PRICING</a>
+								</div>
+							</div>
+						</div>
+									</div>
+								</div>
+								
+							</div>
+							
+							
+						</div>
+						
+						<div class="custom-circle custom-circle-big custom-circle-pos-20 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="200" data-appear-animation-duration="2s">
+							<div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 1, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-21 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-22 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 3000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-23 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1500}"></div>
+						</div>
+					</div>
+				</section>
+				<section class="section bg-color-light position-relative border-0 pt-0 m-0">
+					<svg class="custom-section-curved-top-3" width="100%" height="298" xmlns="http://www.w3.org/2000/svg">
+						<path id="svg_2" fill="#FFF" stroke="#000" stroke-width="0" d="m-19.87006,126.33922c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c52.17748,6.59421 -86.4742,-15.61273 171.02458,26.26208c64.37469,10.4687 130.09704,0.19531 175.01626,-5.4736c44.91922,-5.66892 49.93384,-12.28022 191.44685,-45.34647c141.51301,-33.06625 221.34662,-61.99188 426.81438,-59.4919c102.73388,1.24999 203.44102,29.65927 398.99543,109.88821c195.55441,80.22895 668.78972,-44.38181 814.0537,-9.88704c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"/>
+					</svg>
+					<div id="product-6"  class="container position-relative z-index-1 pb-5 mb-5">
+						<div class="custom-circle custom-circle-medium custom-circle-pos-17 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
+							<div class="bg-color-quaternary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2000}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-18 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="400">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 2500}"></div>	
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-19 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="600">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>	
+						</div>
+							
+						
+						<div class="row justify-content-center pb-2 mb-4">
+							<div class="col-md-12 col-lg-12 mb-4 mb-lg-0">
+								<div class="card border-0 custom-box-shadow-1 custom-border-radius-1 mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" data-plugin-options="{'accY': -100}">
+									<div class="custom-dots-rect-3" style="background-image: url("{% static 'img/demos/seo-2/dots-group-3.png' %}");"></div>
+									<div class="card-body text-center p-5">
+										<div class="row justify-content-center mb-4">
+							<div class="col-8 text-center col-xl-9">
+								
+								<div class="overflow-hidden mb-2">
+								<h2 class="font-weight-bold text-color-quaternary text-7 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="350">Bare Metal</h2>
+								</div>
+								<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Solely your server reserved on an hourly basis in our data center, with a committment of no longer then 1 hour.&nbsp; &nbsp; &nbsp;</p>
+							</div>
+						</div>
+										<img src="{% static 'img/demos/seo-2/icons/cloud.png' %}" class="img-fluid mb-4 mt-3 pb-3" width="100" alt="" />
+										<h4 class="text-color-dark font-weight-semibold mb-3">Bare Metal</h4>
+										<p><strong>ARRIVING Q2 2021</strong>&nbsp; For a myriad of applications especially needed to meet compliance needs or the needs of a service provider.&nbsp; You will have complete access to the console of your server without the headaches or purchasing, racking, stacking, networking, OS installation, and then having to shut it down if you decide you dont need it.&nbsp; &nbsp; &nbsp;</p>
+										<div class="row mb-4">
+							<div class="col text-center">
+								<div class="overflow-hidden">
+									<a href="{% url 'pricing' %}#product-6" class="btn btn-secondary btn-outline btn-rounded font-weight-bold px-5 py-3 text-3 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="250">PRICING</a>
+								</div>
+							</div>
+						</div>
+									</div>
+								</div>
+								
+							</div>
+							
+							
+						</div>
+						
+						<div class="custom-circle custom-circle-big custom-circle-pos-20 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="200" data-appear-animation-duration="2s">
+							<div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 1, 'transition': true, 'transitionDuration': 2000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-small custom-circle-pos-21 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-medium custom-circle-pos-22 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-1 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 3000}"></div>
+						</div>
+						<div class="custom-circle custom-circle-extra-small custom-circle-pos-23 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1700" data-appear-animation-duration="2s">
+							<div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1500}"></div>
+						</div>
+					</div>
+				</section>
+				<section class="section section-height-3 bg-color-secondary position-relative border-0 m-0">
+					<div class="container position-relative z-index-1 pt-2 pb-5 mt-3 mb-5">
+						<div class="row justify-content-center mb-5">
+							<div class="col-md-8 col-lg-6 text-center">
+								<div class="overflow-hidden mb-2">
+									<h2 class="font-weight-bold text-color-light text-7 line-height-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="250">Get Your Instant Audit of AWS &amp; Azure</h2>
+								</div>
+								<div class="overflow-hidden mb-1">
+									<p class="lead custom-text-color-light-1 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Determine how much money you will Save with us</p>
+								</div>
+								<div class="overflow-hidden mb-3">
+									<p class="custom-text-color-light-1 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="550">Provide Read-Only Access &amp; IdeaDC will go through provisioned and used resources in your AWS &amp; Azure account to find you savings.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col">
+								<form class="custom-form-style-1 custom-form-simple-validation form-errors-light" action="/">
+									<div class="form-row mb-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">
+										<div class="form-group col-md-6 pr-md-2">
+											<input type="text" class="form-control" value="" placeholder="Your  Name" required />
+										</div>
+										<div class="form-group col-md-6 pl-md-2">
+											<input type="email" class="form-control" value="" placeholder="Enter E-mail Adress" required />
+										</div>
+									</div>
+									<div class="form-row justify-content-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="850">
+										<div class="form-group col-auto mb-0">
+											<button type="submit" class="btn btn-quaternary btn-rounded font-weight-bold px-5 py-3 text-3">CHECK NOW</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div> {% endcomment %}
+		</div>
+
+		<!-- Vendor -->
+		<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.appear/jquery.appear.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.cookie/jquery.cookie.min.js' %}"></script>
+		<script src="{% static 'vendor/popper/umd/popper.min.js' %}"></script>
+		<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'vendor/common/common.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.validation/jquery.validate.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.gmap/jquery.gmap.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.lazyload/jquery.lazyload.min.js' %}"></script>
+		<script src="{% static 'vendor/isotope/jquery.isotope.min.js' %}"></script>
+		<script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'vendor/vide/jquery.vide.min.js' %}"></script>
+		<script src="{% static 'vendor/vivus/vivus.min.js' %}"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static 'js/theme.js' %}"></script>
+
+		<!-- Current Page Vendor and Views -->
+
+
+
+
+		<!-- Demo -->
+		<script src="{% static 'js/demos/demo-seo-2.js' %}"></script>
+
+		<!-- Theme Custom -->
+		<script src="{% static 'js/custom.js' %}"></script>
+
+
+		<!-- Theme Initialization Files -->
+		<script src="{% static 'js/theme.init.js' %}"></script>
+	
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+{% endblock content %}

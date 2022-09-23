@@ -1,0 +1,532 @@
+{% extends 'base.html' %} {% load cms_tags menu_tags sekizai_tags %} {% load static %} {% block title %} IdeaDC | Contact Us {% endblock %} {% block content %}
+<link href="{% static 'css/custom.css' %}" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+<div role="main" class="main">
+{% static_placeholder 'Contact_Us_Page' %}
+    {% comment %} <section class="page-header page-header-lg custom-bg-color-light-1 border-0 m-0">
+        <div class="container position-relative pt-5 pb-4 mt-5">
+            <div class="custom-circle custom-circle-wrapper custom-circle-big custom-circle-pos-1 custom-circle-pos-1-1 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="900" data-appear-animation-duration="2s">
+                <div class="bg-color-tertiary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"></div>
+            </div>
+            <div class="custom-circle custom-circle-medium custom-circle-pos-2 custom-circle-pos-2-2 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1450" data-appear-animation-duration="2s">
+                <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.2, 'transition': true, 'transitionDuration': 2000}"></div>
+            </div>
+            <div class="custom-circle custom-circle-medium custom-circle-pos-3 custom-circle-pos-3-3 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="1300">
+                <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000}"></div>
+            </div>
+            <div class="custom-circle custom-circle-small custom-circle-pos-4 custom-circle-pos-4-4 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="1600">
+                <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.6, 'transition': true, 'transitionDuration': 500}"></div>
+            </div>
+            <div class="custom-circle custom-circle-medium custom-circle-pos-5 custom-circle-pos-5-5 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1050" data-appear-animation-duration="2s">
+                <div class="bg-color-secondary rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.2, 'transition': true, 'transitionDuration': 2000}"></div>
+            </div>
+            <div class="custom-circle custom-circle-medium custom-circle-pos-6 custom-circle-pos-6-6 appear-animation" data-appear-animation="expandInWithBlur" data-appear-animation-delay="1200" data-appear-animation-duration="2s">
+                <div class="custom-bg-color-grey-2 rounded-circle w-100 h-100" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 500}"></div>
+            </div>
+            <div class="row py-5 mb-5 mt-2 p-relative z-index-1">
+                <div class="row align-items-center pt-4">
+                    <div class="col-md-6 pb-5 mb-md-5">
+                        <div class="spacer" style="height: 110px; padding-top: 0px"></div>
+                        <ul class="breadcrumb d-block text-left appear-animation col-lg-6" data-appear-animation="maskUp" data-appear-animation-delay="800">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li class="active">Contact Us let's keep in touch</li>
+                        </ul>
+                        <h1 class="d-block text-color-quaternary font-weight-bold text-left mb-0 appear-animation col-lg-12" data-appear-animation="maskUp" data-appear-animation-delay="1000" style="color: #171940 !important">
+                            Contact Us <br />let's keep in touch
+                        </h1>
+                        <br />
+
+                        <div class="spacer d-none d-md-block" style="height: 310px"></div>
+                    </div>
+                    <div class="col-md-6 pb-5">
+                        <img src="{% static 'img/demos/seo-2/concept-1.png' %}" class="img-fluid position-relative z-index-1 pb-5 mb-5 ml-5 top-10 appear-animation" data-appear-animation="fadeInUpShorter"
+              data-appear-animation-delay="750"
+              data-appear-animation-duration="1500ms" alt="idea dc" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-color-light position-relative border-0 pt-3 m-0">
+      <svg
+        class="custom-page-header-curved-top-1"
+        width="100%"
+        height="700"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          transform="rotate(-3.1329219341278076 1459.172607421877,783.5322875976566)"
+          d="m-12.54488,445.11701c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132
+                            88.20271,5.91306 140.3802,12.50726c230.96006,32.89734 314.60609,102.57281 635.26547,59.88645c320.65938,-42.68635 452.47762,-118.72154 843.58759,3.72964c391.10997,122.45118 553.23416,-82.15958 698.49814,-47.66481c-76.25064,69.23438
+                            407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"
+          stroke-width="0"
+          stroke="#000"
+          fill="#FFF"
+          id="svg_2"
+        />
+      </svg>
+      <div class="container pb-2 mb-4">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-6 mb-5 mb-lg-0">
+            <div class="overflow-hidden mb-1">
+              <h2
+                class="text-color-dark font-weight-semibold text-6 line-height-3 mb-0 pr-5 mr-5 appear-animation"
+                data-appear-animation="maskUp"
+                data-appear-animation-delay="1200"
+              >
+                Free Cloud Audit and Free Proposal
+              </h2>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <span
+                class="d-block mb-0 appear-animation"
+                data-appear-animation="maskUp"
+                data-appear-animation-delay="1400"
+                >CONTACT US TODAY</span
+              >
+            </div>
+            <p
+              class="lead pr-5 mb-4 pb-2 appear-animation"
+              data-appear-animation="fadeInUpShorter"
+              data-appear-animation-delay="1600"
+            >
+              Our goal is for you to manage your cloud efficiently, robustly, and
+              more cost-effective.
+            </p>
+            <div
+              class="feature-box align-items-center mb-4 pb-1 appear-animation"
+              data-appear-animation="fadeInUpShorter"
+              data-appear-animation-delay="1800"
+            >
+              <div
+                class="feature-box-icon custom-feature-box-icon-size-1 bg-color-secondary top-0"
+              >
+                <i class="icon-globe icons position-relative"></i>
+              </div>
+              <div class="feature-box-info">
+                <h4
+                  class="font-weight-bold line-height-1 custom-font-size-1 mb-1"
+                >
+                  Address
+                </h4>
+                <p class="mb-0">
+                  544 Harrison Ave, <br />
+                  Harrison, NY 10528. USA
+                </p>
+              </div>
+            </div>
+            <div
+              class="feature-box align-items-center mb-4 pb-1 appear-animation"
+              data-appear-animation="fadeInUpShorter"
+              data-appear-animation-delay="2000"
+            >
+              <div
+                class="feature-box-icon custom-feature-box-icon-size-1 bg-color-quaternary top-0"
+              >
+                <i class="icon-call-in icons position-relative top-2 right-1"></i>
+              </div>
+              <div class="feature-box-info">
+                <h4
+                  class="font-weight-bold line-height-1 custom-font-size-1 mb-1"
+                >
+                  Phone
+                </h4>
+                <p class="mb-0">
+                  <a href="tel:+1234567890" class="custom-text-color-grey-1">
+                    +1 914 582-8130</a
+                  >
+                  <a href="tel:+1 914 582-8130" class="custom-text-color-grey-1"
+                    >&nbsp;</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div
+              class="feature-box align-items-center appear-animation"
+              data-appear-animation="fadeInUpShorter"
+              data-appear-animation-delay="2200"
+            >
+              <div
+                class="feature-box-icon custom-feature-box-icon-size-1 bg-color-secondary top-0"
+              >
+                <i class="icon-envelope icons position-relative top-1"></i>
+              </div>
+              <div class="feature-box-info">
+                <h4
+                  class="font-weight-bold line-height-1 custom-font-size-1 mb-1"
+                >
+                  E-mail
+                </h4>
+                <p class="mb-0">
+                  <a
+                    href="mailto:office@ideadc.com"
+                    class="custom-text-color-grey-1"
+                    >office@ideadc.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-10 col-lg-6 appear-animation"
+            data-appear-animation="fadeInRightShorter"
+            data-appear-animation-delay="2000"
+          >
+            <div class="card border-0 custom-border-radius-1 box-shadow-1 p-2">
+              <div class="card-body p-4 z-index-1">
+                <h4
+                  class="text-color-dark font-weight-semibold text-5 line-height-3 ls-0 mb-1 mt-2 pr-5 mr-5"
+                >
+                  Send Us a Message
+                </h4>
+                <p class="pb-2 mb-4">
+                  We will actually read the message within 24 hours and respond.
+                </p>
+              <!-- Contact Form -->
+               <div class="loading">Loading&#8230;</div>             
+                <form
+                  id="contactform"
+                  method="POST"
+                  class="contact-form custom-form-style-1"
+                 >
+                  <span
+                    id="successmessage"
+                    style=" color: #155724; background-color: #d4edda; border-color: #c3e6cb; font-size: 16px;"
+                  ></span>
+
+                  <span
+                    id="errorMsg"
+                    style=" color: #ff0029; background-color: #e7f7fa; border-color: #c3e6cb; font-size: 16px;"
+                  ></span>
+
+                  <div class="form-row">
+                    <div class="form-group col mb-3">
+                      <input
+                        type="text"
+                        data-msg-required="Please enter your name."
+                        maxlength="50"
+                        class="form-control custom-bg-color-light-1 border-0"
+                        name="first_name"
+                        id="id_name"
+                        onkeypress="return Validate_Name(event);"
+                        placeholder="Your Name*"
+                        required
+                      />
+                      <span
+                        id="lblError_name"
+                        style="color: red; font-size: 13px"
+                      ></span>
+                      <span
+                        id="lblError_nameError"
+                        style="color: red; font-size: 13px"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col mb-3">
+                      <input
+                        type="email"
+                        maxlength="100"
+                        class="form-control custom-bg-color-light-1 border-0"
+                        name="email"
+                        id="id_email"
+                        placeholder="E-mail Address*"
+                        title="Enter Your Email"
+                        onkeyup="ValidateEmail();"
+                        required
+                      />
+                      <span
+                        id="lblError_email"
+                        style="color: red; font-size: 13px"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col mb-3">
+                      <textarea
+                        maxlength="5000"
+                        rows="6"
+                        class="form-control custom-bg-color-light-1 border-0"
+                        name="message"
+                        id="id_message"
+                        placeholder="Your Message*"
+                        style="resize: none;"
+                        required
+                      ></textarea>
+                      <span
+                        id="lblError_message"
+                        style="color: red; font-size: 13px"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col mb-3">
+                      <button
+                        type="submit"
+                        onclick="validation()"
+                        class="btn-gradient btn-rounded font-weight-bold px-5 py-3 text-3"
+                      >
+                        Send Now
+                      </button>
+                       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    </div>
+                    </div>
+                      <div class="g-recaptcha" data-sitekey="6LfGT3saAAAAAJmXQL4V7671fZSP4LEeWyscal21"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background-color: #048ec8 !important;"  class="section section-height-3 bg-color-secondary position-relative border-0 m-0">
+      <div class="container position-relative z-index-1 pt-2 pb-5 mt-3 mb-5">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 col-lg-6 text-center">
+            <div class="overflow-hidden mb-2">
+              <h2
+                class="font-weight-bold text-color-light text-7 line-height-2 mb-0 appear-animation"
+                data-appear-animation="maskUp"
+                data-appear-animation-delay="250"
+                style=" color: #FFF !important;"
+              >
+                Get Your Instant Audit of AWS & Azure
+              </h2>
+            </div>
+            <div class="overflow-hidden mb-1">
+              <p
+                class="lead custom-text-color-light-1 mb-0 appear-animation"
+                data-appear-animation="maskUp"
+                data-appear-animation-delay="400"
+              >
+                Determine how much money you will Save with us.
+              </p>
+            </div>
+            <div class="overflow-hidden mb-3">
+              <p
+                class="custom-text-color-light-1 mb-0 appear-animation"
+                data-appear-animation="maskUp"
+                data-appear-animation-delay="550"
+              >
+                Provide Read-Only Access & IdeaDC will go through provisioned and
+                used resources in your AWS & Azure account to find you savings.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <form
+              class="custom-form-style-1 custom-form-simple-validation form-errors-light"
+              action="/"
+            >
+              <div
+                class="form-row mb-4 appear-animation"
+                data-appear-animation="fadeInUpShorter"
+                data-appear-animation-delay="700"
+              >
+                <div class="form-group col-md-6 pr-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-6 pl-md-2">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter E-mail Adress"
+                    title="Enter Your email"
+                    required
+                  />
+                </div>
+              </div>
+              <div
+                class="form-row justify-content-center appear-animation"
+                data-appear-animation="fadeInUpShorter"
+                data-appear-animation-delay="850"
+              >
+                <div class="form-group col-auto mb-0">
+                  <button
+                    type="submit"
+                    class="btn btn-quaternary btn-rounded font-weight-bold px-5 py-3 text-3"
+                    style="cursor: pointer;background-color: #171940;border-color: #171940 #171940 #0a0a1a;color: #FFF;"
+                  >
+                    CHECK NOW
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> {% endcomment %}
+    
+{% autoescape off %}
+{% addtoblock "js" %}
+<script>
+  // check only character feilds
+  function Validate_Name(e) {
+    if (e.target.name =="name") {
+      var keyCode = e.keyCode || e.which;
+      var lblError = document.getElementById("lblError_nameError") || "";
+      lblError.innerHTML ="";
+      var regex = /^[A-Za-z\s+]+$/;
+      var isValid = regex.test(String.fromCharCode(keyCode));
+      if (!isValid) {
+        lblError.innerHTML ="Please enter only alphabetical letters.";
+        setTimeout(function () {
+          lblError.innerHTML ="";
+        }, 2000);
+      }
+      return isValid;
+    }
+  }
+
+  //Check id empty feilds
+  function validation() {
+    var name = document.getElementById("id_name").value;
+    var email = document.getElementById("id_email").value;
+    var message = document.getElementById("id_message").value;
+    if (name =="") {
+      var lblError1 = document.getElementById("lblError_name") || "";
+      lblError1.innerHTML ="Please enter your name.";
+      setTimeout(function () {
+        lblError1.innerHTML ="";
+      }, 1500);
+      return false;
+    } else if (email =="") {
+      var lblError2 = document.getElementById("lblError_email") || "";
+      lblError2.innerHTML ="Please enter your email.";
+      setTimeout(function () {
+        lblError2.innerHTML ="";
+      }, 1500);
+    } else if (message =="") {
+      var lblError3 = document.getElementById("lblError_message") || "";
+      lblError3.innerHTML ="Please enter your message.";
+      setTimeout(function () {
+        lblError3.innerHTML ="";
+      }, 1500);
+    } else {
+      return true;
+    }
+  }
+  $('first_name').on('click', ()=>{
+    
+  })
+  //validation for Email
+  function ValidateEmail() {
+    var email = document.getElementById("id_email").value;
+    var lblError = document.getElementById("lblError_email") || "";
+    lblError.innerHTML ="";
+    var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (!expr.test(email)) {
+      lblError.innerHTML ="Invalid email address.";
+      return false
+    }else{
+        return expr.test(email)
+      }
+      if(email ==""){
+         lblError.innerHTML ="";
+      }
+  }
+
+    $("#id_name").bind("paste", function (e) {
+      var self = this;
+      setTimeout(function (e) {
+        var val = $(self).val();
+        if (val !="0") {
+          var regex = /^[A-Za-z]+$/
+          if (val.match(regex) == null) {
+            $(".first_name").val("");
+            $("#lblError_name")
+              .html("Only Alaphabet allowed")
+              .show()
+              .delay(1000)
+              .fadeOut("slow");
+            setTimeout(function (e) {
+              $this.val(null);
+            }, 200);
+          }
+          $(this).val(val);
+        }
+      }, 0);
+    });
+
+    //Validate Space in mandatory feids
+      document.getElementById("id_name").addEventListener('keydown', function (e) {
+                if (this.value.length === 0 && e.which === 32) e.preventDefault();
+      });
+
+      document.getElementById("id_message").addEventListener('keydown', function (e) {
+                if (this.value.length === 0 && e.which === 32) e.preventDefault();
+      });
+
+
+    $("#contactform").on("submit", function (e) {
+      $(".loading").show();
+      e.preventDefault();
+      if($("#g-recaptcha-response").val() == ""){
+         $(".loading").hide();
+        Swal.fire({
+            title: "recaptcha field is required",
+            icon: 'error',
+            confirmButtonColor: '#3085d6',
+        }).then((result) => {
+           location.reload();
+        })
+      }else{
+        data = {
+            name: $("#id_name").val(),
+            email:$("#id_email").val(),
+            message: $("#id_message").val(),
+            g_recaptcha_response:$("#g-recaptcha-response").val()
+          };
+        if(ValidateEmail()) {
+          $.ajax({
+            type:"POST",
+            url: `{{ URL }}/contact-us.html`,
+            data: data,
+            success: function (data) {
+              document.getElementById("contactform").reset();
+              $(".loading").hide();
+              if (data.success) {
+                var thankYouMessage = document.getElementById("successmessage");
+                thankYouMessage.innerHTML = data.success;
+              } else {
+                var errorMessage = document.getElementById("errorMsg");
+                errorMessage.innerHTML = data.error;
+              }
+            },
+            failure: function (err) {
+              $(".loading").hide();
+              var errorMessage = document.getElementById("errorMsg");
+              errorMessage.innerHTML = err;
+            },
+          });
+        }
+        else{
+            $(".loading").hide();
+              Swal.fire({
+                  icon:"error",
+                  title:"Please enter valid e-mail address",
+            });
+        }
+      }
+  });
+</script>
+{% endaddtoblock 'js' %}
+{% endautoescape %}
+</div>
+
+
+
+{% endblock content %}

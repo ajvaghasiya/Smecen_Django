@@ -1,0 +1,556 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    color: #282828;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    outline: none !important;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus,
+select:focus,
+button:focus,
+.btn:focus,
+btn.focus {
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+    color: #147190;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    color: #4e88e6;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    outline: none !important;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: none !important;
+}
+
+input,
+textarea,
+select {
+    /*-moz-appearance: none; -webkit-appearance: none;*/
+}
+
+.container {
+    width: 96%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+
+/************* Sign Up Sec ***************/
+
+.signup_sec {
+    width: 100%;
+    float: left;
+    padding: 60px 0;
+    margin: 0;
+    /* background: #eeeeee; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup_sec .container {
+    max-width: 1050px;
+}
+
+.signup_inn {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    background: #f7f7f7;
+}
+
+
+/********* Left **********/
+
+.signup_left {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+}
+
+.creat_info {
+    width: 100%;
+    float: left;
+    padding: 42px 35px;
+    margin: 0;
+    background: #171940;
+}
+
+.signup_left .creat_info h2 {
+    color: #ffffff;
+}
+
+.signup_left .creat_info p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.signup_left h2 {
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: 26px;
+    color: #242424;
+    font-weight: bold;
+}
+
+.signup_left p {
+    padding: 0;
+    margin: 0 0 24px 0;
+    font-size: 15px;
+    color: #242424;
+    font-weight: normal;
+}
+
+.signup_left p a {
+    color: #30abee;
+}
+
+.signup_left p a:hover {
+    color: #30abee;
+    text-decoration: underline;
+}
+
+.social_signin {
+    width: 100%;
+    float: left;
+    padding: 40px 35px 30px 35px;
+    margin: 0;
+}
+
+ul.signin_listing {
+    width: 100%;
+    max-width: 235px;
+    margin: 0 auto;
+    display: block;
+}
+
+ul.signin_listing li {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 11px 0;
+}
+
+ul.signin_listing li a {
+    width: 100%;
+    min-height: 38px;
+    padding: 7px 15px 0 47px;
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    display: block;
+    background: #49629b;
+    position: relative;
+}
+
+ul.signin_listing li a i {
+    min-width: 28px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+}
+
+ul.signin_listing li a.red {
+    background: #dc4b38;
+}
+
+ul.signin_listing li a.black {
+    background: #242424;
+}
+
+ul.signin_listing li a.blue {
+    background: #0e76a9;
+}
+
+ul.signin_listing li a.yellow {
+    background: #ef8a08;
+}
+
+ul.signin_listing li a:hover {
+    opacity: 0.8;
+}
+
+
+/********* Right **********/
+
+.signup_form {
+    width: 100%;
+    float: left;
+    padding: 40px 33px 35px 33px;
+    margin: 0;
+}
+
+.signup_logo {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0 0 80px 0;
+    text-align: center;
+}
+
+.signup_form .row {
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.signup_form [class^="col-"],
+.signup_form>[class*=" col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.signup_form .form-group {
+    margin: 0 0 18px 0;
+}
+
+.signup_form .form-control {
+    padding: 0 10px;
+    height: 45px;
+    font-size: 16px;
+    color: #8c8c8c;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup_form .form-control:focus {
+    border-color: #038ec7;
+}
+
+.check_info {
+    margin-bottom: 20px;
+}
+
+.check_info .custom-control {
+    padding: 0 0 0 32px;
+}
+
+.check_info .custom-control-label {
+    padding-top: 3px;
+    font-size: 13px;
+    color: #8c8c8c;
+}
+
+.check_info .custom-control-label::after,
+.check_info .custom-control-label::before {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #048fc8;
+    left: -32px;
+    top: 2px;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.check_info .custom-control-input:checked~.custom-control-label::before {
+    border-color: #35ab45;
+}
+
+.signup_btn {
+    width: 100%;
+    max-width: 225px;
+    padding: 9px 20px;
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+    background: #038ec7;
+}
+
+.signup_btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+.signup_btn:focus {
+    color: #fff;
+}
+
+
+/************ Login Page ***********/
+
+.login_sec {
+    width: 100%;
+    max-width: 327px;
+    margin: 35px auto 0 auto;
+    display: block;
+}
+
+.login_sec .form-group {
+    margin-bottom: 45px;
+}
+
+.login_sec .btn-block {
+    margin-top: 45px;
+}
+
+
+/************ Varify Page 16-4-2021 ************/
+
+.varify_sec {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    margin-top: 20%;
+}
+
+.varify_inn {
+    width: 100%;
+    float: left;
+    padding: 35px 70px 5px 70px;
+    margin: 0;
+    background: #f7f7f7;
+}
+
+.varify_logo {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.varify_sec h3 {
+    padding: 0;
+    margin: 0 0 45px 0;
+    text-align: center;
+    font-size: 22px;
+    color: #242424;
+    font-weight: 600;
+}
+
+.varify_sec .or {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 71px 0 0 0;
+    text-align: center;
+    font-size: 20px;
+    color: #363636;
+    font-weight: 700;
+}
+
+.radio_info {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 13px 0 0 0;
+}
+
+.radio_info .custom-control {
+    font-size: 14px;
+    color: #259cd1;
+}
+
+.radio_info .custom-control-label {
+    padding-top: 2px;
+}
+
+.radio_info .custom-control-label::before {
+    border-color: #259cd1;
+}
+
+.radio_info .custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #259cd1;
+    background-color: #259cd1;
+}
+
+.varify_sec .form-group {
+    min-height: 68px;
+}
+
+.varify_sec .signup_btn {
+    font-size: 18px;
+}
+
+.varify_sec .btn-block {
+    margin: 10px 0 30px 0;
+}
+
+.passwordEYE {
+    float: right;
+    margin-top: -20px;
+    position: relative;
+    margin: -30px 8px 0 -5px;
+    background: white;
+}
+
+
+/************ 24-4-2021 ***************/
+
+header {
+    width: 100%;
+    float: left;
+    background: #f9f9f9;
+}
+
+header .container {
+    max-width: 1050px;
+}
+
+.top_part {
+    padding: 6px 0;
+    margin: 0;
+    border-bottom: 1px solid #d7d7d7;
+    text-align: right;
+}
+
+.top_part ul {
+    padding: 0;
+    margin: 0;
+}
+
+.top_part ul li {
+    padding: 0;
+    margin: 0 0 0 7px;
+    display: inline-block;
+    font-size: 16px;
+    color: #048ec8;
+}
+
+.top_part ul li a {
+    padding: 4px 12px;
+    margin: 0;
+    display: block;
+    color: #048ec8;
+    border: 1px solid #048ec8;
+    border-radius: 5px;
+}
+
+.top_part ul li a:hover {
+    background: #048ec8;
+    color: #fff;
+}
+
+
+/*********** Nav Sec *********/
+
+.nav_sec {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.nav_sec .navbar {
+    padding: 0;
+}
+
+.nav_sec .navbar-light .navbar-brand {
+    padding: 0;
+}
+
+.nav_sec .navbar-light .navbar-nav li {
+    margin: 0 0 0 35px;
+}
+
+.nav_sec .navbar-light .navbar-nav .nav-link {
+    padding: 11px 0;
+    margin: 0;
+    font-size: 16px;
+    color: #5c5c5c;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_sec .navbar-light .navbar-nav .nav-link:hover,
+.nav_sec .navbar-light .navbar-nav .nav-link:focus {}
+
+.nav_sec .navbar-light .navbar-nav .show>.nav-link,
+.nav_sec .navbar-light .navbar-nav .active>.nav-link,
+.nav_sec .navbar-light .navbar-nav .nav-link.show,
+.nav_sec .navbar-light .navbar-nav .nav-link.active {}
+
+.nav_sec .dropdown-menu {
+    padding: 0.5rem;
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav_sec .dropdown-item {
+    padding: 5px 15px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_sec .dropdown-item:hover,
+.nav_sec .dropdown-item.active {
+    background: #038ec7;
+    color: #fff;
+}
+
+.capcha_info {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.forgot_link {
+    padding: 0;
+    margin: 30px 0 0 0;
+    text-align: center;
+    font-size: 12px;
+    color: #048ec8;
+}
+
+.forgot_link a {
+    color: #048ec8;
+}
+
+.forgot_link a:hover {
+    color: #333;
+}

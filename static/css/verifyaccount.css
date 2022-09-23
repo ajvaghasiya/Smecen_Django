@@ -1,0 +1,127 @@
+.row {
+    margin: 0px 0px 0px 100px;
+}
+
+.hide {
+    opacity: 0;
+    top: calc(50% + 8em);
+}
+
+.show {
+    opacity: 1;
+    top: calc(50% + 6em);
+}
+
+.card {
+    width: 350px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #fff;
+    border: none;
+    height: 380px;
+    position: relative;
+}
+
+.mobile-text {
+    color: #989696b8;
+    font-size: 15px;
+}
+
+.form-control {
+    margin-right: 12px;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ff8880;
+    outline: 0;
+    box-shadow: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+
+/* new */
+
+.hm-gradient {
+    background-image: linear-gradient( to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.darken-grey-text {
+    color: #2e2e2e;
+}
+
+.danger-text {
+    color: #ff3547;
+}
+
+.default-text {
+    color: #2bbbad;
+}
+
+.info-text {
+    color: #33b5e5;
+}
+
+.form-white .md-form label {
+    color: #fff;
+}
+
+.form-white input[type="text"]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.form-white input[type="text"]:focus:not([readonly])+label {
+    color: #fff;
+}
+
+.form-white input[type="password"]:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.form-white input[type="password"]:focus:not([readonly])+label {
+    color: #fff;
+}
+
+.form-white input[type="password"],
+.form-white input[type="text"] {
+    border-bottom: 1px solid #fff;
+}
+
+.form-white .form-control:focus {
+    color: #fff;
+}
+
+.form-white .form-control {
+    color: #fff;
+}
+
+.form-white textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+    color: #fff;
+}
+
+.form-white textarea.md-textarea {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.form-white textarea.md-textarea:focus:not([readonly])+label {
+    color: #fff;
+}
+
+.ripe-malinka-gradient {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+
+.near-moon-gradient {
+    background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+}

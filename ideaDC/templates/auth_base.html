@@ -1,0 +1,119 @@
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %}
+{% load socialaccount %} 
+
+<!DOCTYPE html>
+    <html>
+    {% render_block "css" %}
+        {% block head %}
+            <head>
+                <!-- Required meta tags -->
+                <meta charset="utf-8 ">
+                <meta name="viewport " content="width=device-width, initial-scale=1 ">
+                <meta name="description " content="{% page_attribute 'meta_description' %} ">
+                <link rel="shortcut icon" href="{% static 'img/logos/favicon.ico' %}" type="image/x-icon" />
+                <link rel="apple-touch-icon" href="{% static 'img/logos/dc.png' %}">
+                <title>{% block title %} IdeaDC {% endblock title %}</title>
+
+                <!-- Bootstrap CSS -->
+                <link href="{% static 'css/homepage.css' %}" rel="stylesheet">
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+                <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                
+
+                <link href="{% static 'css/login_signup_verify_css/bootstrap.css' %}" rel="stylesheet">
+                <link href="{% static 'css/login_signup_verify_css/style.css' %}" rel="stylesheet">
+                <link href="{% static 'css/login_signup_verify_css/responsive.css' %}" rel="stylesheet">
+                <link href="{% static 'css/login_signup_verify_css/fontawesome.css' %}" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" type="text/css">
+
+            </head>
+        {% endblock head %}
+
+        {% block header %}
+            <header>
+                <!-- Top Part -->
+                <div class="top_part">
+                    <div class="container">
+                        {% if user.is_authenticated %}
+                        <ul>
+                            <li><a >{{user.username}}</a></li>
+                            <li><a href="{% url 'password_change' %}">Change Password</a></li>
+                            <li><a role="button" onClick="logoutUser()" >Logout</a></li>
+                        </ul>
+                        {% else %}
+                        <ul>
+                            <li><a href="{% url 'login' %}">Log in</a></li>
+                            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <!-- Nav Sec -->    
+                <div class="nav_sec">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#Navigation" aria-controls="Navigation" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+                        
+                        <div class="collapse navbar-collapse" id="Navigation">
+                            <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="{% url 'product' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'product' %}#product-1">Powerful Compute</a>
+                                <a class="dropdown-item" href="{% url 'product' %}#product-2">Object Storage</a>
+                                <a class="dropdown-item" href="{% url 'product' %}#product-3">Block Storage</a>
+                                <a class="dropdown-item" href="{% url 'product' %}#product-4">Dedicated Cloud</a>
+                                <a class="dropdown-item" href="{% url 'product' %}#product-5">Load Balancers</a>
+                                <a class="dropdown-item" href="{% url 'product' %}#product-6">Bare Metal</a>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'pricing' %}">Pricing</a></li>
+                            
+                            <li class="nav-item"><a class="nav-link" href="{% url 'support' %}">Support</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        </nav>
+                    </div>
+                </div>
+                
+            </header>
+        {% endblock header %}
+             
+
+        <body class="mainbody">
+            <div class="container">
+            {% cms_toolbar %}
+                {% block content %}  
+                {% endblock content %}      
+             {% render_block "js" %}
+            </div>
+    <script>
+        function logoutUser(){
+                $(".loading").show();
+                    $.ajax({
+                        type: "GET",
+                        url: `${URL}/user/logout`,
+                        success: function(data) {
+                            window.location =`${URL}`
+                            $(".loading").hide();
+                            $.cookie('sessionid', "", { domain: '.ideadc.com',path: 'https://portal.ideadc.com',});
+                            $.cookie('csrftoken', "", { domain: '.ideadc.com' ,path: 'https://portal.ideadc.com',});
+                        },
+            });
+        }
+    </script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</html>

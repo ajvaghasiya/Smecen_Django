@@ -1,0 +1,183 @@
+{% extends 'auth_base.html' %}
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %} 
+{% load socialaccount %} 
+{% block title %}IdeaDC | Login{% endblock %}
+
+
+{% block content %}
+<div class="signup_sec">
+    <div class="loading">Loading&#8230;</div>
+    {% static_placeholder 'Login Page' %}
+    {% comment %} <div class="container">
+        <div class="signup_inn">
+            <div class="row no-gutters">
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
+                    <div class="signup_left d-flex h-100 flex-column">
+                        <div class="creat_info">
+                            <h2>Please Sign in</h2>
+                            <p>
+                                Enter your email and password to sign in. Don’t have an account?
+                                <a href="{% url 'signup' %}">Register here</a>
+                            </p>
+                        </div>
+                        <div class="social_signin">
+                            <h2>Social Media Sign In</h2>
+                            <p>
+                                Alternatively, you can sign in by signing into your existing social media account.
+                            </p>
+                            <ul class="signin_listing">
+                                <li>
+                                    <a href="{% provider_login_url 'facebook'  method='oauth2' %}"><i class="fab fa-facebook-f"></i> Sign in with
+                        Facebook</a
+                      >
+                    </li>
+                    <li>
+                      <a href="{% provider_login_url 'google' %}" class="red"
+                        ><i class="fab fa-google"></i> Sign in with Google</a
+                      >
+                    </li>
+                    <li>
+                      <a href="{% provider_login_url 'apple' %}" class="black"
+                        ><i class="fab fa-apple"></i> Sign in with Apple</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="{% provider_login_url 'linkedin_oauth2' %}"
+                        class="blue"
+                        ><i class="fab fa-linkedin-in"></i> Sign in with
+                        Linkedin</a
+                      >
+                    </li>
+                    <li>
+                      <a href="{% provider_login_url 'amazon' %}" class="yellow"
+                        ><i class="fab fa-amazon"></i> Sign in with Amazon</a
+                      >
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12">
+            <div class="signup_form">
+              <!-- Logo -->
+              <figure class="signup_logo">
+                <img src="{% static 'img/logo.png' %}" alt="" />
+              </figure>
+
+              <div class="clearfix"></div>
+              <div class="login_sec">
+                <form method="POST" class="loginform" id="login_form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="email"
+                      id="id_email"
+                      class="form-control"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      id="id_password"
+                      name="password"
+                      maxlength="20"
+                      class="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                    <i class="fa fa-fw fa-eye field-icon passwordEYE" id="togglePassword1"></i>
+                  </div>
+                  <div class="btn-block text-center">
+                    <button class="signup_btn">Login</button>
+                  </div>
+                </form>
+                <div class="btn-block text-center">
+                  <a
+                    style="color: #048ec8"
+                    href='{% url "password_reset" %}'
+                    type="submit"
+                    >Forgot Password?</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> {% endcomment %}
+</div>
+
+{% autoescape off %}
+  {% addtoblock "js" %}
+    <script>
+      const URL = "{{ URL }}"  //Get Constant URL
+      //Login Form Submit
+        $("#login_form").on("submit", function (e) {
+          e.preventDefault();
+          data = {
+            "email": $("#id_email").val(),
+            "password": $("#id_password").val(),
+          };
+          if (data){
+            $(".loading").show(); //Loader Show
+
+            //AJax Request
+              $.ajax({
+                type: "POST",
+                url: `${URL}/user/login`,
+                data: data,
+                success: function (data) {
+                  $(".loading").hide();
+                  Swal.fire({
+                      title:  data.success,
+                      icon: 'success',
+                      confirmButtonColor: '#3085d6',
+                    }).then((result) => {
+                      window.location =`${URL}`
+                    })
+                },
+                error: function (err) {
+                $(".loading").hide();
+                if(err["responseJSON"]["error"] == "Verify Your Account"){
+                    Swal.fire({
+                      title:  err["responseJSON"]["error"],
+                      icon: 'warning',
+                      confirmButtonColor: '#3085d6',
+                    }).then((result) => {
+                        window.location =`${URL}/user/send_otp_code`;
+                    })
+                }else{
+                  $(".loading").hide();
+                  Swal.fire({
+                      title:  err["responseJSON"]["error"],
+                      icon: 'error',
+                      confirmButtonColor: '#3085d6',
+                    }).then((result) => {
+                    })
+                }
+                },
+              });
+          }
+      });
+
+      //Password Show ICON
+      const togglePassword = document.querySelector("#togglePassword1");
+      const password = document.querySelector("#id_password");
+      togglePassword.addEventListener("click", function (e) {
+          // toggle the type attribute
+          const type =
+            password.getAttribute("type") === "password" ? "text" : "password";
+          password.setAttribute("type", type);
+          // toggle the eye slash icon
+          this.classList.toggle("fa-eye-slash");
+      });
+    </script>
+  {% endaddtoblock 'js' %}
+{% endautoescape %}
+
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+.signout {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.passwordReset {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.passwordResDone {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.changePassword {
+    text-align: center;
+    margin-top: 20%;
+    width: 100%;
+    float: left;
+    padding: 60px 0;
+    margin: 0;
+}

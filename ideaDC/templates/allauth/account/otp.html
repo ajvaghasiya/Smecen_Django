@@ -1,0 +1,173 @@
+{% extends 'auth_base.html' %}
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %} 
+{% load socialaccount %} 
+{% block title %}IdeaDC | OTP Page{% endblock %}
+
+{% block content %}
+<link href="{% static 'css/login_signup_verify_css/otppage.css' %}" rel="stylesheet" />
+   <div class="loading">Loading&#8230;</div>
+{% static_placeholder 'OTP Page' %}
+ {% comment %} <div class="container">
+    <div class="loading">Loading&#8230;</div>
+    <div class="otpsection">
+        <form method="POST" id="otp_form">
+            <div class="form-group d-flex justify-content-center align-items-center container">
+                <div class="card py-5 px-3">
+                    <h5 class="m-0">Mobile And Email verification</h5>
+                    <span class="mobile-text">Enter the code we just sent to your mobile phone or Email</span
+            >
+            <div class="d-flex flex-row mt-5">
+              <input
+                type="text"
+                id="id_otp"
+                class="form-control"
+                name="otp_code"
+                placeholder="Enter the OTP code here"
+                pattern="[0-9]+"
+                title="number only"
+                required
+              />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Validate OTP</button>
+            <div class="text-center mt-5">
+              <span class="d-block mobile-text">Didn't receive the code?</span
+              ><span
+                id="getSource"
+                onClick="resend(this.value)"
+                class="font-weight-bold text-danger cursor"
+                >Resend</span
+              >
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+</div> {% endcomment %}
+
+
+{% autoescape off %}
+  {% addtoblock "js" %}
+  
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  {% endaddtoblock 'js' %}
+{% endautoescape %}
+
+
+{% autoescape off %}
+  {% addtoblock "js" %}
+  <script>
+   {% comment %} const item = {{getsource}}
+   console.log("test",item) {% endcomment %}
+    const URL = "{{ URL }}" //Get Constant URL
+    $("#getSource").val("{{getsource}}")
+
+
+    //Submit OTP
+    $("#otp_form").on("submit", function (e) {
+      e.preventDefault();
+      data = {
+        "otp": $("#id_otp").val(),
+      };
+      if(JSON.parse(localStorage.getItem('userOTP'))!== null){
+        if (data){
+            $(".loading").show();
+            $.ajax({
+              type: "POST",
+              url: `${URL}/user/verify_otp_code`,
+              data: data,
+              success: function (data) {
+                $(".loading").hide();
+                  Swal.fire({
+                    title:  data.success,
+                    icon: 'success',
+                    confirmButtonColor: '#3085d6',
+                  }).then((result) => {
+                      localStorage.setItem("userOTP", null);
+                      window.location =`${URL}`
+                  })
+              },
+              error: function (err) {
+                $(".loading").hide();
+                  Swal.fire({
+                    title:  err["responseJSON"]["error"],
+                    icon: 'error',
+                    confirmButtonColor: '#3085d6',
+                  }).then((result) => {
+                  })
+              },
+            });
+        }
+      }else{
+          Swal.fire({
+              icon: 'error',
+              title: "Your OTP is expired!",
+          })
+      }
+    });
+
+
+    function resend(value) {
+      console.log("Get source is::>>>>>",value)
+        if (value) {
+          $(".loading").show();
+            $.ajax({
+                type: "POST",
+                url: `${URL}/user/resendotp`,
+                data: {
+                    source: value
+                },
+                success: function(data) {
+                    const now = new Date()
+                    const item = {
+                        value: data.userOTP,
+                        expiry: now.getTime() + 5 * 60,
+                      }
+                    localStorage.setItem("userOTP", JSON.stringify(item));
+                    Swal.fire("Good job!", data.message);
+                    $(".loading").hide();
+                },
+                error: function(err) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: err.message,
+                    })
+                    $(".loading").hide();
+                },
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Please back and resend OTP',
+            })
+        }
+    }
+
+    var myInterval = setInterval(myTime,5000)
+      
+    function myTime(){  
+      const expirationDuration = 5 * 60 * 1000
+      if (JSON.parse(localStorage.getItem('userOTP')) === null){
+        clearInterval(myInterval);
+        myInterval = 0; 
+      }else{
+          const prevTime = JSON.parse(localStorage.getItem('userOTP')).expiry
+          const now = new Date()
+          const currentTime = now.getTime()
+          if (currentTime - prevTime > expirationDuration) {
+            console.log("in clear")
+            localStorage.setItem("userOTP", null);
+          }
+      }
+    };
+
+  </script>
+  {% endaddtoblock 'js' %}
+{% endautoescape %}
+
+{% endblock  %}
