@@ -1,1 +1,1 @@
-# django_cms
+smecen Django
